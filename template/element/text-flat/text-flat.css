@@ -1,0 +1,9 @@
+text-flat
+{
+	display: block;
+	word-break: break-word;
+
+	line-height: calc(100% + 10px);
+	margin-top: -5px;
+	margin-bottom: -5px;
+}

@@ -1,0 +1,102 @@
+layer-background
+{
+	position: relative;
+
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	grid-column-gap: 10px;
+
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+}
+
+#layer-background-matrix
+{
+	position: absolute;
+	z-index: -1;
+	overflow-wrap: break-word;
+
+	width: 100%;
+	margin: 2px 0 0 3.5px;
+
+	cursor: default;
+	user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+}
+
+#layer-background-matrix > span
+{
+	font: 24px/24px 'Roboto Mono', monospace;
+	font-weight: 500;
+}
+
+.layer-background-page
+{
+	position: absolute;
+	z-index: 99;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+
+	width: 50px;
+	height: 50px;
+	left: calc(50% - 25px);
+	top: calc(50% - 25px);
+
+	background-color: var(--foreground-color);
+	color: var(--background-color);
+	border-radius: 16px;
+
+	transform: rotate(45deg);
+}
+
+.layer-background-page-container
+{
+	font: 22.5px/22.5px 'Roboto Mono', monospace;
+	font-weight: 500;
+
+	letter-spacing: 1px;
+	transform: rotate(-45deg);
+}
+
+.layer-background-half
+{
+	display: grid;
+	grid-template-rows: auto min-content min-content min-content;
+	grid-row-gap: 10px;
+}
+
+.layer-background-half.left
+{
+	margin: 20px 0 20px 10px;
+}
+
+.layer-background-half.right
+{
+	margin: 20px 10px 20px 0;
+}
+
+.layer-background-middle
+{
+	width: 100px;
+	height: 1800px;
+	margin: 0 auto;
+}
+
+#layer-background-half-left > *,
+#layer-background-half-right > *
+{
+	margin-bottom: 40px;
+}
+
+.text-left
+{
+	text-align: left;
+}
+
+.text-right
+{
+	text-align: right;
+}

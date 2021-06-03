@@ -1,0 +1,4 @@
+.href-text::selection
+{
+	text-shadow: none;
+}

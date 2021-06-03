@@ -1,0 +1,109 @@
+.layer-product-left
+{
+	display: grid;
+	grid-template-columns: min-content auto;
+	grid-column-gap: 20px;
+}
+
+.layer-product-right
+{
+	display: grid;
+	grid-template-columns: auto min-content;
+	grid-column-gap: 20px;
+}
+
+.layer-product-img-left
+{
+	object-fit: contain;
+
+	width: 64px;
+	height: 64px;
+	padding: 8px;
+
+	border-radius: 6px 0 0 6px;
+}
+
+.layer-product-img-right
+{
+	object-fit: contain;
+
+	width: 64px;
+	height: 64px;
+	padding: 8px;
+
+	border-radius: 0 6px 6px 0;
+}
+
+.layer-product-container-left
+{
+	display: grid;
+	grid-template-rows: 50% calc(50% - 10px);
+	grid-row-gap: 10px;
+
+	padding-top: 7.5px;
+	padding-right: 20px;
+}
+
+.layer-product-container-right
+{
+	display: grid;
+	grid-template-rows: 50% calc(50% - 10px);
+	grid-row-gap: 10px;
+
+	padding-top: 7.5px;
+	padding-left: 20px;
+}
+
+.layer-product-caption-container-left
+{
+	display: grid;
+	grid-template-columns: auto min-content;
+	text-align: left;
+	align-items: center;
+}
+
+.layer-product-caption-container-right
+{
+	display: grid;
+	grid-template-columns: min-content auto;
+	text-align: right;
+	align-items: center;
+}
+
+.layer-product-circle-left
+{
+	width: 30px;
+	height: 30px;
+	margin-right: -14px;
+}
+
+.layer-product-circle-right
+{
+	width: 30px;
+	height: 30px;
+	margin-left: -14px;
+}
+
+.layer-product-progress-container-left
+{
+	border-radius: 0 0 4px 0;
+}
+
+.layer-product-progress-container-right
+{
+	border-radius: 0 0 0 4px;
+}
+
+.layer-product-progress-left
+{
+	height: 100%;
+	margin-right: auto;
+	border-radius: 4px 4px 0 0;
+}
+
+.layer-product-progress-right
+{
+	height: 100%;
+	margin-left: auto;
+	border-radius: 4px 4px 0 0;
+}
