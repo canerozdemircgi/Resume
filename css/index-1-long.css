@@ -1,0 +1,21 @@
+.layer-background-half
+{
+	align-items: center;
+}
+
+.layer_background_half_left > *,
+.layer_background_half_right > *
+{
+	margin-bottom: 60px;
+}
+
+.img-signature
+{
+	height: 88px;
+	margin-top: 30px;
+}
+
+#img_company
+{
+	max-width: 192px;
+}

@@ -1,0 +1,24 @@
+text-flat
+{
+	display: block;
+	word-break: break-word;
+
+	line-height: calc(var(--font-size-main) + 10px);
+	overflow: hidden;
+}
+
+text-flat::before
+{
+	content: '';
+	display: block;
+
+	margin-top: -5px;
+}
+
+text-flat::after
+{
+	content: '';
+	display: block;
+
+	margin-bottom: -5px;
+}

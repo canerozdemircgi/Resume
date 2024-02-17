@@ -1,0 +1,17 @@
+.href-main
+{
+	font-weight: 500;
+
+	color: var(--link-color);
+}
+
+.href-main:hover
+{
+	color: var(--link-selection-color);
+}
+
+.href-main::selection
+{
+	background-color: var(--foreground-color);
+	color: var(--selection-color);
+}

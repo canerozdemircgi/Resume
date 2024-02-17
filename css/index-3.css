@@ -1,0 +1,34 @@
+.float-right
+{
+	float: right;
+}
+
+#reminder_version
+{
+	position: relative;
+	margin-top: 60px;
+	transform: rotate(-14deg);
+}
+
+#reminder_version_content
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	width: max-content;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#reminder_version_content::selection
+{
+	background-color: transparent;
+}
+
+#reminder_version_content,
+#reminder_version_content_data
+{
+	font: 28px/28px 'TeX Gyre Chorus';
+}

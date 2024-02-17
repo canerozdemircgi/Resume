@@ -1,0 +1,7 @@
+text-clause
+{
+	display: grid;
+	grid-template-columns: max-content max-content auto;
+	column-gap: 10px;
+	row-gap: 20px;
+}
