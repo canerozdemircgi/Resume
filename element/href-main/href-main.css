@@ -1,8 +1,9 @@
 .href-main
 {
 	font-weight: 500;
-
 	color: var(--link-color);
+
+    word-break: break-all;
 }
 
 .href-main:hover

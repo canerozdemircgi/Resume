@@ -4,9 +4,6 @@ layer-background
 	z-index: 1;
 
 	display: grid;
-	grid-template-columns: 1fr max-content 1fr;
-	column-gap: 10px;
-
 	height: var(--body-height);
 
 	background-color: var(--background-color);
@@ -16,6 +13,18 @@ layer-background
 	user-select: unset;
 	-ms-user-select: unset;
 	-webkit-user-select: unset;
+}
+
+.layer-background-flat
+{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.layer-background-spiral
+{
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 10px;
 }
 
 #layer_background_matrix
@@ -44,6 +53,7 @@ layer-background
 	height: 25px;
 }
 
+.layer-background-page,
 .layer-background-page-top,
 .layer-background-page-bottom
 {
@@ -65,61 +75,66 @@ layer-background
 	transform: rotate(45deg);
 }
 
+.layer-background-page
+{
+    bottom: 28px;
+}
+
 .layer-background-page-top
 {
-	top: calc(25% - 25px);
+    top: calc(25% - 25px);
 }
 
 .layer-background-page-bottom
 {
-	top: calc(75% - 25px);
+    top: calc(75% - 25px);
 }
 
 .layer-background-page-container
 {
 	font-weight: 500;
-
 	letter-spacing: 1px;
+
 	transform: rotate(-45deg);
-}
-
-.layer-background-half
-{
-	display: grid;
-	grid-template-rows: auto max-content max-content max-content max-content;
-	row-gap: 10px;
-}
-
-.layer-background-half.left
-{
-	margin: 10px 0 0 10px;
-}
-
-.layer-background-half.right
-{
-	margin: 10px 10px 0 0;
 }
 
 .layer-background-middle
 {
     object-fit: fill;
-	width: 90px;
-	height: var(--body-height);
-	margin: 0 auto;
+    width: 100px;
+    height: var(--body-height);
+    margin: 0 auto;
 }
 
-.layer_background_half_left > *,
-.layer_background_half_right > *
+.layer-background-half
+{
+	display: grid;
+	grid-template-rows: auto max-content max-content max-content;
+	row-gap: 10px;
+}
+
+.layer-background-half.left
+{
+	margin: 20px 0 20px 20px;
+}
+
+.layer-background-half.right
+{
+	margin: 20px 20px 20px 0;
+}
+
+.layer-background-half-left > *,
+.layer-background-half-right > *
 {
 	margin-bottom: 40px;
 }
 
-.text-left
+.layer-background-bottom-text-left
 {
 	text-align: left;
 }
 
-.text-right
+.layer-background-bottom-text-right
 {
 	text-align: right;
 }

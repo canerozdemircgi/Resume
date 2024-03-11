@@ -1,14 +1,14 @@
 layer-title-left
 {
 	display: block;
-	padding-right: 10px;
+	padding-right: 20px;
 	border-right: 2px solid var(--border-color);
 }
 
 layer-title-right
 {
 	display: block;
-	padding-left: 10px;
+	padding-left: 20px;
 	border-left: 2px solid var(--border-color);
 }
 
@@ -16,28 +16,35 @@ layer-title-right
 {
 	display: grid;
 	grid-template-columns: auto max-content;
-	margin: 0 10px 20px 0;
+	margin: 0 0 20px 0;
 }
 
 .layer-title-caption-right
 {
 	display: grid;
 	grid-template-columns: max-content auto;
-	margin: 0 0 20px 10px;
+	margin: 0 0 20px 0;
 }
 
 .layer-title-caption-left > span,
 .layer-title-caption-right > span
 {
 	font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .layer-title-hr-left
 {
-	margin: auto 20px 0 0;
+	margin: 0 20px auto 0;
 }
 
 .layer-title-hr-right
 {
-	margin: auto 0 0 20px;
+	margin: 0 0 auto 20px;
+}
+
+.layer-title-text-left,
+.layer-title-text-right
+{
+    margin-top: -3px;
 }

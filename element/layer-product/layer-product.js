@@ -11,7 +11,7 @@ return `\
 		<span>${label}</span>
 		<span class='layer-product-tag'>${tag}</span>
 		<img class='layer-product-badge' src='${badge}'>
-		<img class='layer-product-circle' src='resource/product/Target.svg'>
+		<img class='layer-product-circle' src='resource/main/Target.svg' style='rotate: ${GetRandomInt(0, 360)}deg'>
 	</span>
 	<span class='layer-product-progress-container'>
 		<span class='layer-product-progress' style='width: ${score}%;'></span>

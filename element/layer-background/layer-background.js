@@ -5,7 +5,31 @@ class LayerBackground extends HTMLElement
 	static #alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 	static #matrix_cache = 0.15625 - 0.03125;
 
-	static #LayerBackgroundString(page)
+	static #LayerBackgroundFlatString(page)
+	{
+return `\
+<span id='layer_background_matrix'></span>
+
+<span class='layer-background-half left'>
+	<span id='layer_background_half_left_${page}' class='layer-background-half-left'></span>
+
+	<span class='layer-background-bottom-text-left'>Document ratio matches to ISO 216 paper standard</span>
+	<hr class='hr'>
+	<span class='layer-background-bottom-text-left'>View it with decent readers for the best quality</span>
+</span>
+
+<span class='layer-background-half right'>
+	<span id='layer_background_half_right_${page}' class='layer-background-half-right'></span>
+
+	<span class='layer-background-bottom-text-right'>Next Generation Computed Imagination</span>
+	<hr class='hr'>
+	<span class='layer-background-bottom-text-right'>developed and designed by Caner Özdemir</span>
+</span>
+
+<span class='layer-background-page'><span class='layer-background-page-container'>${page}</span></span>`;
+	}
+
+    static #LayerBackgroundSpiralString(page)
 	{
 return `\
 <span id='layer_background_matrix'></span>
@@ -14,23 +38,23 @@ return `\
 <span class='layer-background-page-bottom'><span class='layer-background-page-container'>${page}</span></span>
 
 <span class='layer-background-half left'>
-	<span id='layer_background_half_left_${page}' class='layer_background_half_left'></span>
+	<span id='layer_background_half_left_${page}' class='layer-background-half-left'></span>
 
-	<span class='text-left'>Document ratio matches to ISO 216 paper standard</span>
+	<span class='layer-background-bottom-text-left'>Document ratio matches to ISO 216 paper standard</span>
 	<hr class='hr'>
-	<span class='text-left'>View it with decent readers for the best quality </span>
+	<span class='layer-background-bottom-text-left'>View it with decent readers for the best quality</span>
 </span>
 
 <img class='layer-background-middle' src='resource/main/background.svg'>
 
 <span class='layer-background-half right'>
-	<span id='layer_background_half_right_${page}' class='layer_background_half_right'></span>
+	<span id='layer_background_half_right_${page}' class='layer-background-half-right'></span>
 
-	<span class='text-right'>Next Generation Computed Imagination</span>
+	<span class='layer-background-bottom-text-right'>Next Generation Computed Imagination</span>
 	<hr class='hr'>
-	<span class='text-right'>developed and designed by Caner Özdemir</span>
+	<span class='layer-background-bottom-text-right'>developed and designed by Caner Özdemir</span>
 </span>`;
-	}
+    }
 
 	static #LayerBackgroundMatrixString()
 	{
@@ -47,12 +71,22 @@ return `\
 
 	get #page() { return this.getAttribute('page'); }
 	get #matrix() { return this.hasAttribute('matrix'); }
+    get #spiral() { return this.hasAttribute('spiral'); }
 
 	constructor()
 	{
 		super();
 
-		this.insertAdjacentHTML('beforeend', LayerBackground.#LayerBackgroundString(this.#page));
+        if (this.#spiral)
+		{
+            this.classList.add('layer-background-spiral');
+            this.insertAdjacentHTML('beforeend', LayerBackground.#LayerBackgroundSpiralString(this.#page));
+        }
+        else
+		{
+            this.classList.add('layer-background-flat');
+            this.insertAdjacentHTML('beforeend', LayerBackground.#LayerBackgroundFlatString(this.#page));
+        }
 
 		const layer_background_half_left = document.getElementById(`layer_background_half_left_${this.#page}`);
 		const layer_background_half_right = document.getElementById(`layer_background_half_right_${this.#page}`);

@@ -1,7 +1,8 @@
-<layer-background page='I'>
+<layer-background class='I' page='I'>
 
 	<layer-empty-left id='layer_person'>
-		<span></span>
+        <img id='layer_qr' src='resource/person/qr.svg'>
+        <span></span>
 		<layer-stamp
 			sign='RESUME'
 			radius_padding='20px'
@@ -12,36 +13,43 @@
 		</layer-stamp>
 	</layer-empty-left>
 
-	<layer-title-left id='layer_info' position='afterbegin' title='INFO'>
+	<layer-title-left id='layer_about' position='afterbegin' title='ABOUT'>
 		<text-clause>
-			<span class='text-clause-info'>Name</span>:<span>Caner Özdemir</span>
-			<span class='text-clause-info'>Title</span>:<span>Senior Software Engineer</span>
-			<span class='text-clause-info'>E-Mail</span>:<span id='span_email'><href-main href='mailto:canerozdemir.mail@gmail.com'></href-main></span>
-			<span class='text-clause-info'>Phone</span>:<span id='span_phone'>+905067661924</span>
-			<span class='text-clause-info'>Portfolio</span>:<span id='span_portfolio'><href-main href='https://canerozdemircgi.github.io/website'></href-main></span>
-			<span class='text-clause-info'>GitHub</span>:<span id='span_github'><href-main href='https://github.com/canerozdemircgi'></href-main></span>
-			<span class='text-clause-info'>LinkedIn</span>:<span id='span_linkedin'><href-main href='https://linkedin.com/in/caner-özdemir-50a530184'></href-main></span>
+			<span>Name</span><span class='font-mono'>:</span><span>Caner Özdemir</span>
+			<span>Title</span><span class='font-mono'>:</span><span>Senior Software Engineer</span>
+			<span>E-Mail</span><span class='font-mono'>:</span><span id='span_email'><href-main href='mailto:canerozdemir.mail@gmail.com'></href-main></span>
+			<span>Phone</span><span class='font-mono'>:</span><span id='span_phone'><href-main href='tel:+90 506 766 19 24'></href-main></span>
 		</text-clause>
 	</layer-title-left>
 
+    <layer-title-left id='layer_portfolio' position='afterbegin' title='PORTFOLIO'>
+        <text-clause>
+            <span>WebSite</span><span class='font-mono'>:</span><span id='span_website'><href-main href='https://canerozdemircgi.github.io/website'></href-main></span>
+            <span>GitHub</span><span class='font-mono'>:</span><span id='span_github'><href-main href='https://github.com/canerozdemircgi'></href-main></span>
+            <span>LinkedIn</span><span class='font-mono'>:</span><span id='span_linkedin'><href-main href='https://linkedin.com/in/caner-özdemir-50a530184'></href-main></span>
+            <span>Cover</span><span class='font-mono'>:</span><span id='span_cover'><href-main href='https://canerozdemircgi.github.io/website/?path=Main/Document/Cover_Letter'></href-main></span>
+            <span>Details</span><span class='font-mono'>:</span><span id='span_details'><href-main href='https://canerozdemircgi.github.io/redir/?Portfolio-Details-_-Caner-Özdemir.docx'></href-main></span>
+        </text-clause>
+    </layer-title-left>
+
 	<layer-title-right id='layer_education' position='afterbegin' title='EDUCATION'>
-		<text-entry-right br='10px' text='Computer Science (Bachelor of Science - B.Sc.)' mark='_star-black'></text-entry-right>
-		<text-entry-right br='10px' text='<href-main href="https://gazi.edu.tr/view/SetCulture?language=en-US">Gazi University</href-main>, ENAEE, English 30%' mark='>'></text-entry-right>
-		<text-entry-right br='10px' text='GPA: 3.27 / 4.0 (Graduated with distinction - ranked 2nd)' mark='*'></text-entry-right>
+		<text-entry-right br='15px' text='Computer Science (Bachelor of Science - B.Sc.)' mark='_star-black'></text-entry-right>
+		<text-entry-right br='15px' text='<href-main href="https://gazi.edu.tr/view/SetCulture?language=en-US">Gazi University</href-main>, ENAEE, English 30%' mark='>'></text-entry-right>
+		<text-entry-right br='15px' text='GPA: 3.27 / 4.0 (Graduated with distinction - ranked 2nd)' mark='*'></text-entry-right>
 	</layer-title-right>
 
 	<layer-title-right id='layer_summary' position='afterbegin' title='SUMMARY'>
-		<text-flat align='justify'>
-6+ years active industry experience in software engineering with professional vision & mission in corporate companies. Involvement into most stages of the software development processes.<div class='br20'></div>
-Productive, innovative and balanced. Capable with different workflows, modern patterns, alternative solutions. Have advanced programming skill, solid technical proficiency, responsive and adaptable time management in addition to self-improvement vision.<div class='br20'></div>
-Proved strong determination along immense motivation to succeed by utilizing good software engineering practices and solutions.
+		<text-flat>
+6+ years of hands-on industry experience in software engineering with professional vision at corporate companies. Involvement and contribution into most stages of application development life-cycle.<div class='br20'></div>
+Productive, innovative and balanced. Proficient with effective workflows, modern patterns, creative solutions. Possessing advanced programming skill, solid technical foundation, immense learning ability, responsive and adaptable time management in addition to commitment of self-improvement. Have enthusiasm to confront challenges like dividing complex processes into maintainable modules, prioritizing tasks, minimizing risks through proactive foresight.<div class='br20'></div>
+Demonstrating strong determination along dedicated motivation to achieve success by utilizing best practices, proved approaches and optimal methodologies.
 		</text-flat>
 	</layer-title-right>
 
 	<layer-product-left category='programming' score='66' badge='LinkedIn'
 		product='c++'
 		label='c++, c++11, c++14, c++17, c++20, c'
-		tag='boost, clion, msys, mingw, openmp, openmpi, zeromq, embedded'>
+		tag='boost, clion, msys, mingw, openmp, openmpi, zeromq, embedded, object oriented, thread'>
 	</layer-product-left>
 	<layer-product-left category='programming' score='66' badge='LinkedIn'
 		product='java'
@@ -50,7 +58,7 @@ Proved strong determination along immense motivation to succeed by utilizing goo
 	</layer-product-left>
 	<layer-product-left category='programming' score='66' badge='LinkedIn'
 		product='python'
-		tag='numpy, pycharm'>
+		tag='numpy, pycharm, design patterns, solid principles, ooa, ood, oop'>
 	</layer-product-left>
 	<layer-product-left category='programming' score='63'
 		product='qt'
@@ -63,7 +71,7 @@ Proved strong determination along immense motivation to succeed by utilizing goo
 	</layer-product-left>
 	<layer-product-left category='programming' score='39'
 		product='opencv'
-		tag='asterisk, verilog, vhdl'>
+		tag='asterisk, verilog, vhdl, complexity'>
 	</layer-product-left>
 	<layer-product-left category='programming' score='47'
 		product='dotnet'
@@ -72,17 +80,12 @@ Proved strong determination along immense motivation to succeed by utilizing goo
 	</layer-product-left>
 	<layer-product-left category='programming' score='49'
 		product='database'
-		label='postgresql, oracle pl/sql'
-		tag='relational database, mysql, sql, rdbms'>
+		label='oracle pl/sql, postgresql'
+		tag='relational database, mysql, sql, rdbms, data structure, distributed system'>
 	</layer-product-left>
 	<layer-product-left category='programming' score='60'
 		product='regex'
-		tag='regular expression'>
-	</layer-product-left>
-	<layer-product-left category='other' score='0'
-		product='blank'
-		label=''
-		tag='data structure, algorithm, thread, complexity, distributed system, microservice, architecture, design patterns, solid principles'>
+		tag='regular expression, algorithm'>
 	</layer-product-left>
 
 	<layer-product-right category='programming' score='62'
@@ -93,7 +96,7 @@ Proved strong determination along immense motivation to succeed by utilizing goo
 	<layer-product-right category='programming' score='62'
 		product='js'
 		label='javascript, node.js'
-		tag='js, jquery, typescript, php, webstorm, rest api, soap, web service'>
+		tag='js, jquery, typescript, php, webstorm, rest api, soap, web service, microservice, architecture'>
 	</layer-product-right>
 	<layer-product-right category='programming' score='50'
 		product='linux'
@@ -103,12 +106,12 @@ Proved strong determination along immense motivation to succeed by utilizing goo
 	<layer-product-right category='programming' score='64'
 		product='autodesk'
 		label='mel, openmaya'
-		tag='pymel'>
+		tag='pymel, functional, programming, analysis'>
 	</layer-product-right>
 	<layer-product-right category='programming' score='51'
 		product='git'
 		label='git, svn'
-		tag='tfs, diff, merge, atlassian, bitbucket, jenkins, jira, confluence, agile, scrum, kanban, sprint, waterfall, project, documentation'>
+		tag='tfs, diff, merge, atlassian, bitbucket, jenkins, jira, confluence, agile, scrum, kanban, sprint, waterfall, project, documentation, continuous integration, continuous deployment, ci/cd, review'>
 	</layer-product-right>
 	<layer-product-right category='graphic' score='65'
 		product='Autodesk Maya'
@@ -126,11 +129,6 @@ Proved strong determination along immense motivation to succeed by utilizing goo
 	<layer-product-right category='graphic' score='45'
 		product='Unreal Engine'
 		tag='Unity, glsl, hlsl, OpenGL, DirectX, Vulkan'>
-	</layer-product-right>
-	<layer-product-right category='other' score='0'
-		product='blank'
-		label=''
-		tag='ooa, ood, oop, object oriented, analysis, programming, functional, continuous integration, continuous deployment, ci/cd, review'>
 	</layer-product-right>
 
 </layer-background>

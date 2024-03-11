@@ -5,7 +5,7 @@ class LayerTitleLeft extends HTMLElement
 	static #LayerTitleLeftString(title)
 	{
 return `\
-<span class='layer-title-caption-left'><hr class='hr layer-title-hr-left'><span>${title}</span></span>`;
+<span class='layer-title-caption-left'><hr class='hr layer-title-hr-left'><span class='layer-title-text-left'>${title}</span></span>`;
 	}
 
 	get #title() { return this.getAttribute('title'); }
@@ -26,7 +26,7 @@ class LayerTitleRight extends HTMLElement
 	static #LayerTitleRightString(title)
 	{
 return `\
-<span class='layer-title-caption-right'><span>${title}</span><hr class='hr layer-title-hr-right'></span>`;
+<span class='layer-title-caption-right'><span class='layer-title-text-right'>${title}</span><hr class='hr layer-title-hr-right'></span>`;
 	}
 
 	get #title() { return this.getAttribute('title'); }

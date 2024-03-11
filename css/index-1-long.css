@@ -1,21 +1,73 @@
+#img-signature
+{
+    margin-left: auto;
+}
+
+#img_company
+{
+    max-width: 176px;
+
+    display: grid;
+    align-items: center;
+
+    font: 27px/27px 'Roboto Slab', monospace;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+layer-title-left
+{
+    border-right: 2px dashed var(--border-color);
+}
+
+layer-title-right
+{
+    border-left: 2px dashed var(--border-color);
+}
+
+layer-title-left:last-child,
+layer-title-right:last-child
+{
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 40px;
+}
+
+text-flat,
+text-entry-left,
+text-entry-right
+{
+    font: 28px/38px 'TeX Gyre Chorus', serif;
+    letter-spacing: 0.1875px;
+}
+
 .layer-background-half
 {
 	align-items: center;
 }
 
-.layer_background_half_left > *,
-.layer_background_half_right > *
+.layer-background-half-left > *,
+.layer-background-half-right > *
 {
 	margin-bottom: 60px;
 }
 
-.img-signature
+.layer-title-caption-left > .hr,
+.layer-title-caption-right > .hr
 {
-	height: 88px;
-	margin-top: 30px;
+    border-style: dashed;
 }
 
-#img_company
+.layer-title-caption-left > span,
+.layer-title-caption-right > span
 {
-	max-width: 192px;
+    font: 30px/30px 'TeX Gyre Chorus', serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.img-signature
+{
+    display: block;
+	height: 88px;
+	margin-top: 40px;
 }

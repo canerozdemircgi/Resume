@@ -5,10 +5,11 @@ class HrefMain extends HTMLElement
 	static #HrefMainString(id, href, text)
 	{
 return `\
-<a id='${id}' class='href-main' href='${href}'>${text}</a>`;
+<a id='${id}' class='href-main' href='${href}' title=''>${text}</a>`;
 	}
 
 	get #href() { return this.getAttribute('href'); }
+    set #href(value) { this.setAttribute('href', value); }
 
 	constructor()
 	{
@@ -17,7 +18,10 @@ return `\
 		const id = Date.now().toString(36) + Math.random().toString(36).replace('.', '');
 
 		if (this.innerHTML === '')
-			this.innerHTML = this.#href.replace(/https:\/\/|mailto:/, '');
+			this.innerHTML = this.#href.replace(/https:\/\/|mailto:|tel:/, '');
+
+        if (this.#href.includes('tel:'))
+            this.#href = this.#href.replaceAll(' ', '');
 
 		const innerHTML = `${this.innerHTML}`;
 		this.innerHTML = null;

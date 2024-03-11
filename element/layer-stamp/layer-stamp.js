@@ -26,7 +26,7 @@ return `\
 
 		this.insertAdjacentHTML('beforeend', LayerStamp.#LayerStampString(this.#sign, this.#radius_padding, this.#font, this.#font_padding, this.#color, this.#degree));
 
-		new ResizeObserver(entries => this.style.width = `${entries[0].target.clientHeight}px`).observe(this);
+		// new ResizeObserver(entries => this.style.width = `${entries[0].target.clientHeight}px`).observe(this);
 	}
 }
 window.customElements.define('layer-stamp', LayerStamp);

@@ -1,3 +1,2 @@
 *.otf
 *.png
-*.woff2

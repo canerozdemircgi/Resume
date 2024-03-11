@@ -1,12 +1,6 @@
-.float-right
-{
-	float: right;
-}
-
 #reminder_version
 {
 	position: relative;
-	margin-top: 60px;
 	transform: rotate(-14deg);
 }
 
@@ -31,4 +25,15 @@
 #reminder_version_content_data
 {
 	font: 28px/28px 'TeX Gyre Chorus';
+    letter-spacing: 0.25px;
+}
+
+layer-background.II
+{
+    column-gap: 20px;
+}
+
+.float-right
+{
+    float: right;
 }
