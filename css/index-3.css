@@ -1,0 +1,39 @@
+#reminder_version
+{
+	position: relative;
+	transform: rotate(-14deg);
+}
+
+#reminder_version_content
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	width: max-content;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#reminder_version_content::selection
+{
+	background-color: transparent;
+}
+
+#reminder_version_content,
+#reminder_version_content_data
+{
+	font: 28px/28px 'TeX Gyre Chorus';
+    letter-spacing: 0.25px;
+}
+
+layer-background.II
+{
+    column-gap: 20px;
+}
+
+.float-right
+{
+    float: right;
+}

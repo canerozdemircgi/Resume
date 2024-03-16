@@ -1,0 +1,33 @@
+layer-stamp
+{
+	position: relative;
+	height: 100%;
+}
+
+.layer-stamp-circle-big
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.layer-stamp-circle-small
+{
+	position: absolute;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+
+	border: 2px solid var(--inactive-color);
+	border-radius: 50%;
+}
+
+.layer-stamp-text
+{
+	position: absolute;
+	text-align: center;
+
+	color: var(--background-color);
+	filter: blur(1px);
+}

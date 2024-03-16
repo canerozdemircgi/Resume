@@ -1,0 +1,96 @@
+layer-product-left,
+layer-product-right
+{
+	display: grid;
+	grid-template-columns: max-content auto;
+	column-gap: 20px;
+}
+
+.layer-product-img
+{
+	width: 64px;
+	height: 64px;
+	padding: 8px;
+
+	border-top: 2px solid var(--foreground-color);
+	border-bottom: 2px solid var(--foreground-color);
+	border-left: 2px solid var(--foreground-color);
+	border-radius: 6px 0 0 6px;
+}
+
+.layer-product-container
+{
+	display: grid;
+	grid-template-rows: 1fr 18px;
+	row-gap: 10px;
+
+	border-top: 2px solid var(--foreground-color);
+
+	margin-left: -20px;
+	padding: 7px 14px 0 20px;
+}
+
+.layer-product-caption-container
+{
+	display: grid;
+	grid-template-columns: max-content auto max-content max-content;
+	text-align: left;
+	align-items: center;
+}
+
+.layer-product-badge
+{
+	width: 26px;
+	height: 26px;
+	opacity: 0.33;
+}
+
+.layer-product-circle
+{
+	width: 26px;
+	height: 26px;
+	margin-left: 15px;
+	margin-right: -12px;
+}
+
+.layer-product-progress-container
+{
+	display: flex;
+	background: linear-gradient(90deg,
+		var(--gradient-1-color) 0%,
+		var(--gradient-1-color) 10%,
+		var(--gradient-2-color) 100%
+	);
+	border-radius: 0 0 4px 0;
+}
+
+.layer-product-progress
+{
+	margin-right: auto;
+
+	background-color: transparent;
+	border-radius: 4px 4px 0 0;
+}
+
+.layer-product-progress-remain
+{
+	margin-top: -2px;
+
+	background-color: var(--background-color);
+	border-bottom: 2px solid var(--gradient-1-color);
+	border-right: 2px solid var(--gradient-1-color);
+	border-radius: 0 0 4px 0;
+}
+
+.layer-product-tag
+{
+	color: var(--tag-color);
+	font-size: 25%;
+	line-height: 25%;
+}
+
+.layer-product-tag::selection
+{
+	background-color: transparent;
+	color: transparent;
+}
