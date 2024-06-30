@@ -1,0 +1,12 @@
+*.css
+*.editorconfig
+*.gitignore
+*.htm
+*.html
+*.js
+*.ma
+*.md
+*.nojekyll
+*.svg
+*.txt
+*.url
