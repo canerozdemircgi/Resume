@@ -1,0 +1,173 @@
+@font-face
+{
+	font-family: 'TeX Gyre Chorus';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../resource/font/texgyrechorus-mediumitalic.otf');
+}
+
+:root
+{
+	--background-color: #f0f0f0;
+	--foreground-color: #303030;
+	--border-color: #303030;
+	--inactive-color: #909090;
+	--underline-color: #999999;
+	--tag-color: #f0f0f1;
+
+	--selection-color: #f0f080;
+	--selection-image-color: #f0f08044;
+
+	--stamp-red-color: #a04040;
+	--stamp-blue-color: #406080;
+
+	--gradient-1-color: #6090c0;
+	--gradient-2-color: #60c060;
+
+	--link-color: #408080;
+	--link-selection-color: #a04040;
+
+	--body-width: 1350px;
+	--body-height: calc(var(--body-width) * 1.41421356237309); /* ISO-216: √2 */
+
+	--font-size-main: 22px;
+}
+
+*
+{
+	box-sizing: border-box;
+	max-height: 999999px;
+	font: inherit;
+	letter-spacing: 0.125px;
+
+	print-color-adjust: exact !important;
+	-webkit-print-color-adjust: exact !important;
+}
+
+body
+{
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+	font: var(--font-size-main) Roboto, sans-serif;
+	line-height: 1;
+
+	width: var(--body-width);
+	margin: 0;
+	padding: 0;
+
+	background-color: var(--foreground-color);
+	color: var(--background-color);
+}
+
+::selection
+{
+	background-color: var(--selection-color);
+	color: var(--foreground-color);
+}
+
+img::selection
+{
+	background-color: var(--selection-image-color);
+}
+
+br::selection
+{
+	background-color: transparent;
+	color: transparent;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+img
+{
+	object-fit: contain;
+	width: max-content;
+	max-width: 100%;
+}
+
+.remark
+{
+	text-decoration: underline;
+	text-decoration-color: var(--underline-color);
+}
+
+.hr
+{
+	margin: 0;
+
+	border-top: 2px solid var(--border-color);
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+.font-medium,
+.font-medium *
+{
+	font-weight: 500;
+	letter-spacing: 0.5px;
+}
+
+.font-mono,
+.font-mono *
+{
+	font-family: 'Roboto Mono', monospace;
+}
+
+.br00
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 0;
+}
+
+.br05
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 5px;
+}
+
+.br10
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 10px;
+}
+
+.br20
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 20px;
+}
+
+.br40
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 40px;
+}
+
+@media print
+{
+	@page
+	{
+		size: A4 portrait;
+		margin: 0;
+	}
+}
