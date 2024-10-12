@@ -1,0 +1,42 @@
+text-entry-left
+{
+	display: grid;
+	grid-template-columns: 1fr 15px;
+	column-gap: 10px;
+	text-align: right;
+}
+
+text-entry-right
+{
+	display: grid;
+	grid-template-columns: 15px 1fr;
+	column-gap: 10px;
+	text-align: left;
+}
+
+text-entry-left > span,
+text-entry-right > span
+{
+	line-height: calc(var(--font-size-main) + 3px);
+}
+
+.text-entry-drawn
+{
+	background-color: var(--stamp-blue-color);
+	color: var(--background-color);
+	border-radius: 4px;
+	margin: 0 -10px;
+	padding: 10px;
+}
+
+.text-entry-mark-img-left
+{
+	height: 100%;
+	object-position: right center;
+}
+
+.text-entry-mark-img-right
+{
+	height: 100%;
+	object-position: left center;
+}
