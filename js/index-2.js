@@ -13,18 +13,14 @@ if (searchParams.has('outsource'))
 	document.getElementById('span_details').innerText = '.........\n.........';
 }
 
-const layer_about = document.getElementById('layer_about');
-const layer_education = document.getElementById('layer_education');
-const layer_portfolio = document.getElementById('layer_portfolio');
-const layer_summary = document.getElementById('layer_summary');
-
-const layer_left_height = layer_about.getBoundingClientRect().height + layer_portfolio.getBoundingClientRect().height;
-const layer_right_height = layer_education.getBoundingClientRect().height + layer_summary.getBoundingClientRect().height;
+const layers_left = [...document.querySelectorAll('layer-title-left')];
+const layers_right =  [...document.querySelectorAll('layer-title-right')];
+const layer_left_height = layers_left.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
+const layer_right_height = layers_right.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
 
 const layer_person = document.getElementById('layer_person');
-
 layer_person.style.height = `${layer_right_height - layer_left_height - 40}px`;
-layer_person.style.gridTemplateColumns = `${layer_person.style.height} 1fr ${layer_person.style.height}`;
+layer_person.style.gridTemplateColumns = `${layer_person.style.height} 1fr ${layer_person.style.height} 10px`;
 
 const layer_about_recess = document.querySelector('#layer_about > text-clause > span');
 const layer_portfolio_recess = document.querySelector('#layer_portfolio > text-clause > span');
