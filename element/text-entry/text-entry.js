@@ -8,12 +8,12 @@ return `\
 <span>${text}</span>${mark}`;
 	}
 
-	get #text() { return this.getAttribute('text'); }
+	get #text() { return this.getAttribute('text') || ''; }
 	get #br() { return this.getAttribute('br'); }
 	get #bold() { return this.hasAttribute('bold'); }
 	get #drawn() { return this.hasAttribute('drawn'); }
 
-	get #mark() { return this.getAttribute('mark'); }
+	get #mark() { return this.getAttribute('mark') || ''; }
 	set #mark(value) { this.setAttribute('mark', value); }
 
 	constructor()
@@ -49,12 +49,12 @@ return `\
 ${mark}<span>${text}</span>`;
 	}
 
-	get #text() { return this.getAttribute('text'); }
+	get #text() { return this.getAttribute('text') || ''; }
 	get #br() { return this.getAttribute('br'); }
 	get #bold() { return this.hasAttribute('bold'); }
 	get #drawn() { return this.hasAttribute('drawn'); }
 
-	get #mark() { return this.getAttribute('mark'); }
+	get #mark() { return this.getAttribute('mark') || ''; }
 	set #mark(value) { this.setAttribute('mark', value); }
 
 	constructor()
