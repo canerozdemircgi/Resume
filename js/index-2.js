@@ -24,9 +24,12 @@ layer_person.style.gridTemplateColumns = `minmax(0, ${layer_person.style.maxHeig
 
 const layer_about_recess = document.querySelector('#layer_about > text-clause > span');
 const layer_portfolio_recess = document.querySelector('#layer_portfolio > text-clause > span');
-const layer_about_recess_width = layer_about_recess.offsetWidth;
-const layer_portfolio_recess_width = layer_portfolio_recess.offsetWidth;
-if (layer_about_recess_width > layer_portfolio_recess_width)
-	layer_portfolio_recess.style.width = `${layer_about_recess_width}px`;
-else
-	layer_about_recess.style.width = `${layer_portfolio_recess_width}px`;
+if (layer_about_recess !== null && layer_portfolio_recess !== null)
+{
+	const layer_about_recess_width = layer_about_recess.offsetWidth;
+	const layer_portfolio_recess_width = layer_portfolio_recess.offsetWidth;
+	if (layer_about_recess_width > layer_portfolio_recess_width)
+		layer_portfolio_recess.style.width = `${layer_about_recess_width}px`;
+	else
+		layer_about_recess.style.width = `${layer_portfolio_recess_width}px`;
+}
