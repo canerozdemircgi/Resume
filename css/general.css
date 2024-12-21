@@ -154,6 +154,15 @@ img
 	margin-bottom: 20px;
 }
 
+.br30
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 30px;
+}
+
 .br40
 {
 	content: '';
