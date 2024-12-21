@@ -1,6 +1,6 @@
 layer-empty-left,
 layer-empty-right
 {
-	display: grid;
+	display: inline-block;
 	padding: 0 10px;
 }
