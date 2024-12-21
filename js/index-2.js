@@ -19,8 +19,8 @@ const layer_left_height = layers_left.reduce((sum, element) => sum + element.get
 const layer_right_height = layers_right.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
 
 const layer_person = document.getElementById('layer_person');
-layer_person.style.height = `${layer_right_height - layer_left_height - 40}px`;
-layer_person.style.gridTemplateColumns = `${layer_person.style.height} 1fr ${layer_person.style.height} 10px`;
+layer_person.style.maxHeight = `${layer_right_height - layer_left_height - 40}px`;
+layer_person.style.gridTemplateColumns = `minmax(0, ${layer_person.style.maxHeight}) minmax(40px, 1fr) minmax(0, ${layer_person.style.maxHeight}) 10px`;
 
 const layer_about_recess = document.querySelector('#layer_about > text-clause > span');
 const layer_portfolio_recess = document.querySelector('#layer_portfolio > text-clause > span');
