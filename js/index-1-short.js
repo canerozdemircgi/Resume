@@ -15,11 +15,8 @@ const day = prefixDateTime(date.getUTCDate());
 const hour = prefixDateTime(date.getUTCHours());
 const minute = prefixDateTime(date.getUTCMinutes());
 
-document.getElementById('span_date_time').textContent = `${year}-${month}-${day} ${hour}:${minute} UTC0`;
-fetch('version.txt').then(response => response.text()).then(response =>
-{
-	document.getElementById('span_version').textContent = response;
-});
+document.getElementById('span_date').textContent = `${year}-${month}-${day}`;
+document.getElementById('span_time').textContent = `${hour}:${minute} UTC0`;
 
 if (searchParams.has('name'))
 {
