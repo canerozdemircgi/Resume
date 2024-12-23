@@ -19,6 +19,7 @@ const SavePdf = async (url, output_directory) =>
 	const page = (await browser.pages())[0];
 	await page.goto(url, {waitUntil: 'networkidle0'});
 	await page.reload();
+	await new Promise(resolve => setTimeout(resolve, 3000));
 	const title = await page.title();
 	await page.emulateMediaType('screen');
 	await page.pdf(
