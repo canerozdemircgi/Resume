@@ -24,8 +24,9 @@ const configs_base =
 {
 	operation: operation.pdf,
 	operation_pdf_output_directory: 'C:/Users/User/Downloads',
-	path: path.cover_short,
-	resource: resource.remote
+
+	resource: resource.remote,
+	path: path.cover_short
 };
 const configs_extn =
 {
@@ -45,12 +46,10 @@ const configs_extn =
 
 	// path_long_matters: [],
 };
-const configs = configs_base.path === path.resume ? configs_base : { ...configs_base, ...configs_extn };
 
+const configs = configs_base.path.includes(path.resume) ? configs_base : { ...configs_base, ...configs_extn };
 if (configs.path !== path.cover_long)
 	delete configs.path_long_matters;
-
-const entries = Object.entries(configs).slice(1);
 
 const url_base_resource_local = 'http://localhost:63342';
 const url_base_resource_remote = 'https://canerozdemircgi.github.io';
@@ -58,6 +57,8 @@ const url_base_resource = configs_base.resource === resource.local ? url_base_re
 
 const url_base = url_base_resource + '/Resume/index.html?';
 const url_params = []
+
+const entries = Object.entries(configs).slice(3);
 for (let [key, value] of entries)
 {
 	if (Array.isArray(value))
@@ -96,6 +97,4 @@ if (configs.operation === operation.open)
 	OpenChrome();
 }
 else if (configs.operation === operation.pdf)
-{
 	require('child_process').fork('pdf.js', [url, configs.operation_pdf_output_directory]);
-}
