@@ -1,0 +1,11 @@
+#layer_person
+{
+	display: grid;
+	padding: 0;
+}
+
+#layer_qr
+{
+	width: 100%;
+	height: 100%;
+}

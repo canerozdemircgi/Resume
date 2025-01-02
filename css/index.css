@@ -1,0 +1,12 @@
+@media print
+{
+	html
+	{
+		zoom: 0.58792650918635; /* A4: ((210mm * 96dpi) / 25.4mm) / 1350px */
+	}
+
+	.page-break
+	{
+		break-before: page;
+	}
+}
