@@ -117,8 +117,8 @@ ${chunk_bottom}`;
 			[
 				'Document ratio matches to ISO 216 paper standard',
 				'View it with decent readers for the best quality',
-				'Next Generation Computed Imagination',
-				'developed and designed by Caner Özdemir'
+				'Next Generation Medical Representation',
+				'Özge Özdemir _ All Rights Reserved ©'
 			];
 		}
 

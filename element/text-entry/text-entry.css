@@ -17,7 +17,7 @@ text-entry-right
 text-entry-left > span,
 text-entry-right > span
 {
-	line-height: calc(var(--font-size-main) + 3px);
+	line-height: calc(var(--font-size-main) + 10px);
 }
 
 .text-entry-drawn
@@ -26,7 +26,7 @@ text-entry-right > span
 	color: var(--background-color);
 	border-radius: 4px;
 	margin: 0 -10px;
-	padding: 10px;
+	padding: 16px 10px;
 }
 
 .text-entry-mark-img-left

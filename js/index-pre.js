@@ -4,7 +4,7 @@ const GetRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + 
 
 const titles =
 {
-	'resume': 'Resume _ Caner Özdemir',
+	'resume': 'Resume _ Özge Özdemir',
 
 	'index-1-long': 'Cover Letter',
 	'index-1-short': 'Cover Letter',
