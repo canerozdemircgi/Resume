@@ -69,7 +69,7 @@ for (let [key, value] of entries)
 	}
 
 	if (configs[key] !== '')
-		url_params.push(`${key}=${value}`);
+		url_params.push(`${key}=${encodeURIComponent(value)}`);
 }
 const url = url_base + url_params.join('&');
 
