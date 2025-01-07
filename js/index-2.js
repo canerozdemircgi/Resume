@@ -14,7 +14,7 @@ if (searchParams.has('outsource'))
 }
 
 const layers_left = [...document.querySelectorAll('layer-title-left')];
-const layers_right =  [...document.querySelectorAll('layer-title-right')];
+const layers_right = [...document.querySelectorAll('layer-title-right')];
 const layer_left_height = layers_left.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
 const layer_right_height = layers_right.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
 
