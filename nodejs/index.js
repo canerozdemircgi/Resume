@@ -3,7 +3,7 @@
 const path =
 {
 	resume: 'resume',
-	resume_outsource: 'resume&outsource',
+	resume_outsource: 'resume&&outsource',
 	cover_short: 'index-1-short',
 	cover_long: 'index-1-long'
 };
@@ -69,7 +69,7 @@ for (let [key, value] of entries)
 	}
 
 	if (configs[key] !== '')
-		url_params.push(`${key}=${encodeURIComponent(value)}`);
+		url_params.push(`${key}=${encodeURIComponent(value).replaceAll('%26%26', '&')}`);
 }
 const url = url_base + url_params.join('&');
 

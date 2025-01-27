@@ -30,4 +30,6 @@ layer-stamp
 
 	color: var(--background-color);
 	filter: blur(1px);
+
+	border-radius: 4px;
 }

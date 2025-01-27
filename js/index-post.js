@@ -16,5 +16,7 @@ if (path === 'resume')
 		CreateFrame('index-3');
 	});
 }
+else if (path === 'cover-short' || path === 'cover-long')
+	CreateFrame(path.replace('cover', 'index-1'));
 else
 	CreateFrame(path);

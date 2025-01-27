@@ -11,7 +11,8 @@ return `\
 	get #text() { return this.getAttribute('text') || ''; }
 	get #br() { return this.getAttribute('br'); }
 	get #bold() { return this.hasAttribute('bold'); }
-	get #drawn() { return this.hasAttribute('drawn'); }
+	get #is_drawn() { return this.hasAttribute('drawn'); }
+	get #drawn() { return this.getAttribute('drawn'); }
 
 	get #mark() { return this.getAttribute('mark') || ''; }
 	set #mark(value) { this.setAttribute('mark', value); }
@@ -22,8 +23,12 @@ return `\
 
 		if (this.#bold)
 			this.classList.add('font-medium');
-		if (this.#drawn)
+		if (this.#is_drawn)
+		{
 			this.classList.add('text-entry-drawn');
+			if (this.#drawn !== null)
+				this.style.backgroundColor = this.#drawn;
+		}
 
 		if (this.#mark === '')
 			this.#mark = '&#8203;';
@@ -52,7 +57,8 @@ ${mark}<span>${text}</span>`;
 	get #text() { return this.getAttribute('text') || ''; }
 	get #br() { return this.getAttribute('br'); }
 	get #bold() { return this.hasAttribute('bold'); }
-	get #drawn() { return this.hasAttribute('drawn'); }
+	get #is_drawn() { return this.hasAttribute('drawn'); }
+	get #drawn() { return this.getAttribute('drawn'); }
 
 	get #mark() { return this.getAttribute('mark') || ''; }
 	set #mark(value) { this.setAttribute('mark', value); }
@@ -63,8 +69,12 @@ ${mark}<span>${text}</span>`;
 
 		if (this.#bold)
 			this.classList.add('font-medium');
-		if (this.#drawn)
+		if (this.#is_drawn)
+		{
 			this.classList.add('text-entry-drawn');
+			if (this.#drawn !== null)
+				this.style.backgroundColor = this.#drawn;
+		}
 
 		if (this.#mark === '')
 			this.#mark = '&#8203;';

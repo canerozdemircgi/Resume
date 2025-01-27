@@ -20,18 +20,18 @@
 
 layer-title-left
 {
-	border-right: 2px dashed var(--border-color);
+	border-right: none;
 }
 
 layer-title-right
 {
-	border-left: 2px dashed var(--border-color);
+	border-left: none;
 }
 
 layer-title-left:last-child,
 layer-title-right:last-child
 {
-	border-bottom: 2px dashed var(--border-color);
+	border-bottom: 2px solid var(--border-color);
 	padding-bottom: 40px;
 }
 
@@ -52,12 +52,6 @@ text-entry-right
 .layer-background-half-right > *
 {
 	margin-bottom: 60px;
-}
-
-.layer-title-caption-left > .hr,
-.layer-title-caption-right > .hr
-{
-	border-style: dashed;
 }
 
 .layer-title-caption-left > span,

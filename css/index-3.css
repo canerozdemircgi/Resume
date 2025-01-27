@@ -2,6 +2,9 @@
 {
 	position: relative;
 	transform: rotate(-14deg);
+
+	margin-top: -15px;
+	margin-bottom: 0 !important;
 }
 
 #reminder_version_content
@@ -24,16 +27,25 @@
 #reminder_version_content,
 #reminder_version_content_data
 {
-	font: 28px/30px 'TeX Gyre Chorus';
-	letter-spacing: 0.25px;
-}
-
-layer-background.II
-{
-	column-gap: 20px;
+	font: 28px/28px 'TeX Gyre Chorus';
 }
 
 .float-right
 {
 	float: right;
+}
+
+layer-background.II
+{
+	column-gap: 10px;
+}
+
+layer-background.II > .layer-background-half.left
+{
+	margin: 20px 0 20px 10px;
+}
+
+layer-background.II > .layer-background-half.right
+{
+	margin: 20px 10px 20px 0;
 }

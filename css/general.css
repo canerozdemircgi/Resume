@@ -12,14 +12,13 @@
 	--foreground-color: #303030;
 	--border-color: #303030;
 	--inactive-color: #909090;
-	--underline-color: #999999;
-	--tag-color: #f0f0f1;
+	--tag-color: #ffffff02;
 
 	--selection-color: #f0f080;
 	--selection-image-color: #f0f08044;
 
 	--stamp-red-color: #a04040;
-	--stamp-blue-color: #406080;
+	--stamp-blue-color: #4a6587;
 
 	--gradient-1-color: #6090c0;
 	--gradient-2-color: #60c060;
@@ -27,8 +26,9 @@
 	--link-color: #408080;
 	--link-selection-color: #a04040;
 
+	--iso-216-ratio: 1.41421356237309;
 	--body-width: 1350px;
-	--body-height: calc(var(--body-width) * 1.41421356237309); /* ISO-216: √2 */
+	--body-height: calc(var(--body-width) * var(--iso-216-ratio));
 
 	--font-size-main: 22px;
 }
@@ -40,8 +40,8 @@
 	font: inherit;
 	letter-spacing: 0.125px;
 
-	print-color-adjust: exact !important;
-	-webkit-print-color-adjust: exact !important;
+	text-rendering: geometricPrecision;
+	shape-rendering: geometricPrecision;
 }
 
 body
@@ -89,12 +89,6 @@ img
 	max-width: 100%;
 }
 
-.remark
-{
-	text-decoration: underline;
-	text-decoration-color: var(--underline-color);
-}
-
 .hr
 {
 	margin: 0;
@@ -103,6 +97,8 @@ img
 	border-bottom-width: 0;
 	border-left-width: 0;
 	border-right-width: 0;
+
+	border-radius: 4px;
 }
 
 .font-medium,
@@ -170,13 +166,4 @@ img
 
 	line-height: 0;
 	margin-bottom: 40px;
-}
-
-@media print
-{
-	@page
-	{
-		size: A4 portrait;
-		margin: 0;
-	}
 }

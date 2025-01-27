@@ -4,15 +4,17 @@ layer-product-right
 	display: grid;
 	grid-template-columns: max-content auto;
 	column-gap: 20px;
+
+	border-top: 2px solid var(--foreground-color);
+	border-radius: 6px 0 0 0;
 }
 
 .layer-product-img
 {
 	width: 64px;
 	height: 64px;
-	padding: 8px;
+	padding: 10px 8px 8px 8px;
 
-	border-top: 2px solid var(--foreground-color);
 	border-bottom: 2px solid var(--foreground-color);
 	border-left: 2px solid var(--foreground-color);
 	border-radius: 6px 0 0 6px;
@@ -24,10 +26,8 @@ layer-product-right
 	grid-template-rows: 1fr 18px;
 	row-gap: 10px;
 
-	border-top: 2px solid var(--foreground-color);
-
 	margin-left: -20px;
-	padding: 7px 14px 0 15px;
+	padding: 9px 14px 0 15px;
 }
 
 .layer-product-caption-container
@@ -61,7 +61,7 @@ layer-product-right
 		var(--gradient-1-color) 10%,
 		var(--gradient-2-color) 100%
 	);
-	border-radius: 0 0 4px 0;
+	border-radius: 4px 0 4px 4px;
 }
 
 .layer-product-progress
@@ -69,7 +69,9 @@ layer-product-right
 	margin-right: auto;
 
 	background-color: transparent;
-	border-radius: 4px 4px 0 0;
+	border-radius: 4px 0 0 4px;
+
+	font-size: smaller;
 }
 
 .layer-product-progress-remain
@@ -82,15 +84,19 @@ layer-product-right
 	border-radius: 0 0 4px 0;
 }
 
-.layer-product-tag
+.layer-tag
 {
 	color: var(--tag-color);
-	font-size: 25%;
-	line-height: 25%;
 }
 
-.layer-product-tag::selection
+.layer-tag::selection
 {
 	background-color: transparent;
 	color: transparent;
+}
+
+.layer-product-tag
+{
+	font-size: 25%;
+	line-height: 25%;
 }
