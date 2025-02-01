@@ -89,6 +89,12 @@ img
 	max-width: 100%;
 }
 
+.remark
+{
+	text-decoration: underline;
+	text-decoration-color: var(--underline-color);
+}
+
 .hr
 {
 	margin: 0;
