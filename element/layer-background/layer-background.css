@@ -39,6 +39,8 @@ layer-background
 	user-select: none;
 	-ms-user-select: none;
 	-webkit-user-select: none;
+
+	transform: translateZ(0);
 }
 
 #layer_background_matrix > span

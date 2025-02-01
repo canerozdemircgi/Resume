@@ -55,7 +55,7 @@ ${chunk_bottom}`;
 			return '<span>&nbsp;</span>';
 
 		const character = LayerBackground.#alphabet.charAt(Math.floor(Math.random() * LayerBackground.#alphabet.length));
-		const rgba = GetRandomRgba(0, 32, 64, 128, 0, 32, 0.03125, 0.15625);
+		const rgba = GetRandomRgba(0, 32, 64, 128, 0, 32, 0.03125, 0.125);
 		return `<span style='color: ${rgba};'>${character}</span>`;
 	}
 
