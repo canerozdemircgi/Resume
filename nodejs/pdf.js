@@ -1,5 +1,9 @@
 'use strict';
 
+const pdf_scale = 1;
+const width = pdf_scale * 1350;
+const height = width * Math.SQRT2;
+
 const SavePdf = async (url, output_directory) =>
 {
 	if (output_directory === null)
@@ -12,16 +16,20 @@ const SavePdf = async (url, output_directory) =>
 		headless: true,
 		defaultViewport:
 		{
-			width: 1200,
-			height: 800
+			width: Math.ceil(width),
+			height: Math.ceil(height)
 		}
 	});
 	const page = (await browser.pages())[0];
+
 	await page.goto(url, {waitUntil: 'networkidle0'});
 	await page.reload();
-	await new Promise(resolve => setTimeout(resolve, 3000));
+
 	const title = await page.title();
 	await page.emulateMediaType('screen');
+
+	await new Promise(resolve => setTimeout(resolve, 3000));
+
 	await page.pdf(
 	{
 		displayHeaderFooter: false,
@@ -29,9 +37,19 @@ const SavePdf = async (url, output_directory) =>
 
 		path: output_directory + title + '.pdf',
 
-		width: (0.75 * 1350) + 'px',
-		height: (0.75 * 1350 * Math.SQRT2) + 'px',
-		scale: 0.75
+		preferCSSPageSize: false,
+
+		width: width + 'px',
+		height: height + 'px',
+		scale: pdf_scale,
+
+		margin:
+		{
+			top: '0',
+			right: '0',
+			bottom: '0',
+			left: '0'
+		}
 	});
 	await browser.close();
 };

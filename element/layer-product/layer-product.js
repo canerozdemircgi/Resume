@@ -9,12 +9,12 @@ return `\
 <span class='layer-product-container'>
 	<span class='layer-product-caption-container'>
 		<span>${label}</span>
-		<span class='layer-product-tag'>${tag}</span>
+		<span class='layer-tag layer-product-tag'>${tag}</span>
 		<img class='layer-product-badge' src='${badge}'>
-		<img class='layer-product-circle' src='resource/main/Target.svg' style='rotate: ${GetRandomInt(0, 360)}deg'>
+		<img class='layer-product-circle' src='resource/main/Target.svg' style='rotate: ${GetRandomInt(0, 360)}deg; transform: scaleX(${GetRandomSelect([-1, 1])});'>
 	</span>
 	<span class='layer-product-progress-container'>
-		<span class='layer-product-progress' style='width: ${score}%;'></span>
+		<span class='layer-product-progress layer-tag' style='width: ${score}%;'>Candidate Selected</span>
 		<span class='layer-product-progress-remain' style='width: ${100 - score}%;'></span>
 	</span>
 </span>`;

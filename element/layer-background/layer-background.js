@@ -2,8 +2,7 @@
 
 class LayerBackground extends HTMLElement
 {
-	static #alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-	static #matrix_cache = 0.15625 - 0.03125;
+	static #alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789カキクケコサシスセソタチツテトナニヌネノハヒフヘホ一二三四五六七八九十';
 
 	static #LayerBackgroundFlatBottomString(page)
 	{
@@ -56,11 +55,8 @@ ${chunk_bottom}`;
 			return '<span>&nbsp;</span>';
 
 		const character = LayerBackground.#alphabet.charAt(Math.floor(Math.random() * LayerBackground.#alphabet.length));
-		const r = Math.floor(Math.random() * 256);
-		const g = Math.floor(Math.random() * 256);
-		const b = Math.floor(Math.random() * 256);
-		const a = Math.random() * LayerBackground.#matrix_cache + 0.03125;
-		return `<span style='color: rgba(${r}, ${g}, ${b}, ${a});'>${character}</span>`;
+		const rgba = GetRandomRgba(0, 32, 64, 128, 0, 32, 0.03125, 0.15625);
+		return `<span style='color: ${rgba};'>${character}</span>`;
 	}
 
 	get #page() { return this.getAttribute('page'); }
@@ -86,6 +82,14 @@ ${chunk_bottom}`;
 			chunk_bottom = LayerBackground.#LayerBackgroundFlatBottomString(this.#page);
 		}
 
+		const mottos_default =
+		[
+			'Document ratio matches to ISO 216 paper standard',
+			'View it with decent readers for the best quality',
+			'Next Generation Computed Imagination',
+			'developed and designed by Caner Özdemir'
+		];
+
 		let texts;
 		if (searchParams.has('name'))
 		{
@@ -95,9 +99,9 @@ ${chunk_bottom}`;
 				texts =
 				[
 					mottos[0],
-					'Document ratio matches to ISO 216 paper standard',
+					mottos_default[0],
 					mottos[1],
-					'View it with decent readers for the best quality'
+					mottos_default[1]
 				];
 			}
 			else
@@ -105,21 +109,15 @@ ${chunk_bottom}`;
 				texts =
 				[
 					'',
-					'Document ratio matches to ISO 216 paper standard',
+					mottos_default[0],
 					'',
-					'View it with decent readers for the best quality'
+					mottos_default[1]
 				];
 			}
 		}
 		else
 		{
-			texts =
-			[
-				'Document ratio matches to ISO 216 paper standard',
-				'View it with decent readers for the best quality',
-				'Next Generation Medical Representation',
-				'Özge Özdemir _ All Rights Reserved ©'
-			];
+			texts = mottos_default;
 		}
 
 		this.insertAdjacentHTML('beforeend', LayerBackground.#LayerBackgroundString(this.#page, chunk_middle, chunk_bottom, texts));

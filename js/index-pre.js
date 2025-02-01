@@ -1,13 +1,25 @@
 'use strict';
 
 const GetRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+const GetRandomFloat = (min, max) => Math.random() * (max - min) + min;
+const GetRandomRgba = (rMin, rMax, gMin, gMax, bMin, bMax, aMin, aMax) =>
+{
+	const r = GetRandomInt(rMin, rMax);
+	const g = GetRandomInt(gMin, gMax);
+	const b = GetRandomInt(bMin, bMax);
+	const a = GetRandomFloat(aMin, aMax);
+	return `rgba(${r}, ${g}, ${b}, ${a})`;
+};
+const GetRandomSelect = inputs => inputs[Math.floor(Math.random() * inputs.length)];
 
 const titles =
 {
 	'resume': 'Resume _ Özge Özdemir',
+	'cover-short': 'Cover Letter',
+	'cover-long': 'Cover Letter',
 
-	'index-1-long': 'Cover Letter',
 	'index-1-short': 'Cover Letter',
+	'index-1-long': 'Cover Letter',
 
 	'index-2': 'General and Skills',
 	'index-3': 'Experiences and Projects'
