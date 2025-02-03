@@ -25,8 +25,8 @@ const configs_base =
 	operation: operation.pdf,
 	operation_pdf_output_directory: 'C:/Users/User/Downloads',
 
-	resource: resource.remote,
-	path: path.cover_short
+	resource: resource.local,
+	path: path.resume
 };
 const configs_extn =
 {
