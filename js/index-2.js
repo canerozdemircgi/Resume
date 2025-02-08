@@ -9,8 +9,8 @@ if (searchParams.has('outsource'))
 	document.getElementById('span_website').textContent = '.........';
 	document.getElementById('span_github').textContent = '.........';
 	document.getElementById('span_linkedin').textContent = '.........';
-	document.getElementById('span_cover').innerText = '.........\n.........';
 	document.getElementById('span_details').innerText = '.........\n.........';
+	document.getElementById('span_stats').innerText = '.........';
 }
 
 const layers_left = [...document.querySelectorAll('layer-title-left')];
