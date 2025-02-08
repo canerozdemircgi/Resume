@@ -6,7 +6,7 @@ class LayerStamp extends HTMLElement
 	{
 return `\
 <svg class='layer-stamp-circle-big'>
-	<circle cx='50%' cy='50%' r='calc(50% - 2px)' fill='none' stroke='var(--inactive-color)' stroke-width='2px' stroke-dasharray='13.76px 13.76px'></circle>
+	<circle cx='50%' cy='50%' r='calc(50% - 2px)' fill='none' stroke='var(--inactive-color)' stroke-width='2px' stroke-dasharray='13.55px 13.55px'></circle>
 </svg>
 <span class='layer-stamp-circle-small' style='width: calc(100% - ${radius_padding} * 2); height: calc(100% - ${radius_padding} * 2); margin: ${radius_padding};'>
 	<span class='layer-stamp-text' style='width: calc(100% + (${radius_padding} + 10px) * 2); margin: 0 calc(-${radius_padding} - 10px); padding: ${font_padding} 0; font: ${font}; text-shadow: 0 0 24px ${color}, 0 0 24px ${color}, 0 0 24px ${color}; border-top: 2px solid ${color}; border-bottom: 2px solid ${color}; transform: rotate(${degree});'>${sign}</span>
