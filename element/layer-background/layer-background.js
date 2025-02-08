@@ -51,7 +51,7 @@ ${chunk_bottom}`;
 
 	static #LayerBackgroundMatrixChar()
 	{
-		if (Math.random() < 0.625)
+		if (Math.random() < 0.75)
 			return '<span>&nbsp;</span>';
 
 		const character = LayerBackground.#alphabet.charAt(Math.floor(Math.random() * LayerBackground.#alphabet.length));
