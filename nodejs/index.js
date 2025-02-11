@@ -45,6 +45,7 @@ const configs_extn =
 	*/
 
 	// path_long_matters: [],
+	// matrix_freq: 0.25
 };
 
 const configs = configs_base.path.includes(path.resume) ? configs_base : { ...configs_base, ...configs_extn };
