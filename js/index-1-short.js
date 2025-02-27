@@ -87,3 +87,8 @@ if (searchParams.has('position'))
 	document.getElementById('span_position').textContent = position;
 	document.title += ` _ ${position}`;
 }
+
+if (searchParams.has('hr'))
+{
+	document.getElementById('span_hr').textContent = searchParams.get('hr');
+}
