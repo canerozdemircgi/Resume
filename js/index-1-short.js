@@ -78,7 +78,7 @@ if (searchParams.has('company'))
 }
 else
 {
-	span_company.textContent = '.';
+	span_company.textContent = ' in your company.';
 }
 
 if (searchParams.has('position'))
