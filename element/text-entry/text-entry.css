@@ -17,7 +17,7 @@ text-entry-right
 text-entry-left > span,
 text-entry-right > span
 {
-	line-height: calc(var(--font-size-main) + 3px);
+	line-height: calc(var(--font-size-main) + 5px);
 }
 
 .text-entry-drawn

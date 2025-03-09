@@ -33,3 +33,18 @@ if (layer_about_recess !== null && layer_portfolio_recess !== null)
 	else
 		layer_about_recess.style.width = `${layer_portfolio_recess_width}px`;
 }
+
+if (searchParams.has('outsource'))
+	document.getElementById('reminder_version_content').innerHTML = `\
+......... ......... .........
+<div class='br00'></div>
+......... ......... .........
+<div class='br00'></div>
+......... ......... .........`;
+else
+{
+	fetch('version.txt').then(response => response.text()).then(response =>
+	{
+		document.getElementById('reminder_version_content_data').textContent = response;
+	});
+}
