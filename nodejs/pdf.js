@@ -35,7 +35,7 @@ const SavePdf = async (url, output_directory) =>
 		displayHeaderFooter: false,
 		printBackground: true,
 
-		path: output_directory + title + '.pdf',
+		path: output_directory + title.replace(/[<>:"/\\|?*\x00-\x1F]/g, '_') + '.pdf',
 
 		preferCSSPageSize: false,
 
