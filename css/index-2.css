@@ -2,6 +2,15 @@
 {
 	display: grid;
 	padding: 0;
+
+	width: 0;
+	max-height: 0;
+	overflow: hidden;
+}
+
+#layer_avatar
+{
+	border-radius: 50%;
 }
 
 #layer_qr
