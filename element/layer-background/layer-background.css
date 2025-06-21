@@ -66,15 +66,15 @@ layer-background
 	justify-content: center;
 	align-items: center;
 
-	width: 50px;
+	width: 150px;
 	height: 50px;
-	left: calc(50% - 25px);
+	left: calc(50% - 75px);
 
-	background-color: var(--foreground-color);
-	color: var(--background-color);
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	border-left: 2px solid var(--border-color);
+	border-right: 2px solid var(--border-color);
 	border-radius: 25%;
-
-	transform: rotate(45deg);
 }
 
 .layer-background-page
@@ -96,8 +96,6 @@ layer-background
 {
 	font-weight: 500;
 	letter-spacing: 1px;
-
-	transform: rotate(-45deg);
 }
 
 .layer-background-middle

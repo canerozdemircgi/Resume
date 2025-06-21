@@ -10,7 +10,9 @@
 
 #layer_avatar
 {
-	border-radius: 50%;
+	border: 2px dashed var(--border-color);
+	border-radius: 16px;
+	padding: 5px;
 }
 
 #layer_qr
@@ -22,7 +24,7 @@
 #reminder_version
 {
 	position: relative;
-	transform: rotate(-14deg);
+	transform: rotate(-12deg);
 
 	margin-top: 50px;
 }
@@ -48,4 +50,15 @@
 #reminder_version_content_data
 {
 	font: 28px/28px 'TeX Gyre Chorus';
+	letter-spacing: 0.25px;
+}
+
+layer-background.I > .layer-background-half.left > hr
+{
+	margin-right: 55px;
+}
+
+layer-background.I > .layer-background-half.right > hr
+{
+	margin-left: 55px;
 }

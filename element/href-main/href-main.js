@@ -10,6 +10,7 @@ return `\
 
 	get #href() { return this.getAttribute('href'); }
 	set #href(value) { this.setAttribute('href', value); }
+	get #shorten() { return this.hasAttribute('shorten'); }
 
 	constructor()
 	{
@@ -18,7 +19,12 @@ return `\
 		const id = Date.now().toString(36) + Math.random().toString(36).replace('.', '');
 
 		if (this.innerHTML === '')
-			this.innerHTML = this.#href.replace(/https:\/\/|mailto:|tel:/, '');
+		{
+			if (this.#shorten)
+				this.innerHTML = this.#href.replace(/https:\/\/|mailto:|tel:/, '');
+			else
+				this.innerHTML = this.#href.replace(/mailto:|tel:/, '');
+		}
 
 		if (this.#href.includes('tel:'))
 			this.#href = this.#href.replaceAll(' ', '');
