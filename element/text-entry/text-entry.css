@@ -29,14 +29,8 @@ text-entry-right > span
 	padding: 10px;
 }
 
-.text-entry-mark-img-left
-{
-	height: 100%;
-	object-position: right center;
-}
-
+.text-entry-mark-img-left,
 .text-entry-mark-img-right
 {
-	height: 100%;
-	object-position: left center;
+	margin: auto;
 }

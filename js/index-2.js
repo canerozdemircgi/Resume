@@ -6,9 +6,12 @@ if (searchParams.has('outsource'))
 
 	document.getElementById('span_email').textContent = '.........';
 	document.getElementById('span_phone').textContent = '.........';
+	document.getElementById('span_whatsapp').textContent = '.........';
+
 	document.getElementById('span_website').textContent = '.........';
-	document.getElementById('span_github').textContent = '.........';
 	document.getElementById('span_linkedin').textContent = '.........';
+	document.getElementById('span_github').textContent = '.........';
+
 	document.getElementById('span_details').innerText = '.........';
 	document.getElementById('span_stats').innerText = '.........';
 }

@@ -3,6 +3,7 @@ text-flat
 	display: block;
 	word-break: break-word;
 	line-height: calc(var(--font-size-main) + 10px);
+	padding-bottom: 5px;
 	text-align: justify;
 }
 

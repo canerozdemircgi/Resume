@@ -66,20 +66,33 @@ layer-background
 	justify-content: center;
 	align-items: center;
 
-	width: 50px;
 	height: 50px;
-	left: calc(50% - 25px);
 
-	background-color: var(--foreground-color);
-	color: var(--background-color);
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	border-left: 2px solid var(--border-color);
+	border-right: 2px solid var(--border-color);
 	border-radius: 25%;
-
-	transform: rotate(45deg);
 }
 
 .layer-background-page
 {
+	width: 150px;
 	bottom: 28px;
+	left: calc(50% - 75px);
+}
+
+.layer-background-page-top,
+.layer-background-page-bottom
+{
+	width: 50px;
+	left: calc(50% - 25px);
+
+	background-color: var(--foreground-color);
+	color: var(--background-color);
+	border: none;
+
+	transform: rotate(45deg);
 }
 
 .layer-background-page-top
@@ -96,7 +109,11 @@ layer-background
 {
 	font-weight: 500;
 	letter-spacing: 1px;
+}
 
+.layer-background-page-top > .layer-background-page-container,
+.layer-background-page-bottom > .layer-background-page-container
+{
 	transform: rotate(-45deg);
 }
 
