@@ -58,23 +58,37 @@ if (searchParams.has('company'))
 	span_company.textContent = ` in ${company}.`;
 	document.title += ` - ${company}`;
 
+	let has_logo = false;
 	if (searchParams.has('logo'))
 	{
+		has_logo = true;
+
 		const logo = searchParams.get('logo');
 		document.getElementById('img_company').src = logo;
 	}
 	else
 	{
 		const logo = `resource/company/${company}.svg`;
-		fetch(logo, {method: 'HEAD'}).then(response => {
+		fetch(logo, {method: 'HEAD'}).then(response =>
+		{
 			const img_company = document.getElementById('img_company');
 			if (response.ok)
+			{
+				has_logo = true;
+
 				img_company.src = logo;
+			}
 			else
 				img_company.outerHTML = `<div id='div_company' class='img-signature'>${company.toUpperCase()}</div>`;
 		}).catch(() => {
 		});
 	}
+
+	setTimeout(() =>
+	{
+		if (has_logo && searchParams.has('logo_width'))
+			img_company.style.maxWidth = `${searchParams.get('logo_width')}%`;
+	}, 1000);
 }
 else
 {
