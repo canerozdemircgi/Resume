@@ -51,7 +51,7 @@ const configs = configs_base.path.includes(path.resume) ? configs_base : { ...co
 if (configs.path !== path.cover_long)
 	delete configs.path_long_matters;
 
-const url_base_resource_local = 'http://localhost:63342';
+const url_base_resource_local = 'http://localhost:63343';
 const url_base_resource_remote = 'https://canerozdemircgi.github.io';
 const url_base_resource = configs_base.resource === resource.local ? url_base_resource_local : url_base_resource_remote;
 
