@@ -2,12 +2,10 @@
 {
 	display: grid;
 	padding: 0;
-}
 
-#layer_qr
-{
-	width: 100%;
-	height: 100%;
+	width: 0;
+	max-height: 0;
+	overflow: hidden;
 }
 
 #layer_avatar
@@ -15,8 +13,8 @@
 	border-radius: 50%;
 }
 
-.layer-product
+#layer_qr
 {
-	display: grid;
-	row-gap: 40px;
+	width: 100%;
+	height: 100%;
 }

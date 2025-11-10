@@ -13,11 +13,3 @@ text-flat::before
 
 	margin-top: -5px;
 }
-
-text-flat::after
-{
-	content: '';
-	display: block;
-
-	margin-bottom: -5px;
-}

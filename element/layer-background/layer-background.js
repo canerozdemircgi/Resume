@@ -51,7 +51,8 @@ ${chunk_bottom}`;
 
 	static #LayerBackgroundMatrixChar()
 	{
-		if (Math.random() < 0.625)
+		let matrix_freq = searchParams.has('matrix_freq') ? Number(searchParams.get('matrix_freq')) : 0.25;
+		if (Math.random() < (1 - matrix_freq))
 			return '<span>&nbsp;</span>';
 
 		const character = LayerBackground.#alphabet.charAt(Math.floor(Math.random() * LayerBackground.#alphabet.length));

@@ -13,8 +13,10 @@ layer-product-right
 {
 	width: 64px;
 	height: 64px;
+	margin-top: -2px;
 	padding: 10px 8px 8px 8px;
 
+	border-top: 2px solid var(--foreground-color);
 	border-bottom: 2px solid var(--foreground-color);
 	border-left: 2px solid var(--foreground-color);
 	border-radius: 6px 0 0 6px;

@@ -25,17 +25,17 @@ const SavePdf = async (url, output_directory) =>
 	await page.goto(url, {waitUntil: 'networkidle0'});
 	await page.reload();
 
-	const title = await page.title();
 	await page.emulateMediaType('screen');
 
 	await new Promise(resolve => setTimeout(resolve, 3000));
+	const title = await page.title();
 
 	await page.pdf(
 	{
 		displayHeaderFooter: false,
 		printBackground: true,
 
-		path: output_directory + title + '.pdf',
+		path: output_directory + title.replace(/[<>:"/\\|?*\x00-\x1F]/g, '_') + '.pdf',
 
 		preferCSSPageSize: false,
 

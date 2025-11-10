@@ -4,4 +4,6 @@ text-clause
 	grid-template-columns: max-content max-content auto;
 	column-gap: 10px;
 	row-gap: 15px;
+
+	line-height: calc(var(--font-size-main) + 5px)
 }
