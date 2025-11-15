@@ -3,7 +3,6 @@ text-flat
 	display: block;
 	word-break: break-word;
 	line-height: calc(var(--font-size-main) + 10px);
-	padding-bottom: 5px;
 	text-align: justify;
 }
 
@@ -13,12 +12,4 @@ text-flat::before
 	display: block;
 
 	margin-top: -5px;
-}
-
-text-flat::after
-{
-	content: '';
-	display: block;
-
-	margin-bottom: -5px;
 }

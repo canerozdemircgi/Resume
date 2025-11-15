@@ -6,7 +6,6 @@ if (searchParams.has('outsource'))
 
 	document.getElementById('span_email').textContent = '.........';
 	document.getElementById('span_phone').textContent = '.........';
-	document.getElementById('span_whatsapp').textContent = '.........';
 
 	document.getElementById('span_website').textContent = '.........';
 	document.getElementById('span_linkedin').textContent = '.........';
@@ -43,12 +42,15 @@ else
 	});
 }
 
-const layers_left = [...document.querySelectorAll('layer-title-left')];
-const layers_right = [...document.querySelectorAll('layer-title-right')];
-const layer_left_height = layers_left.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
-const layer_right_height = layers_right.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
+requestIdleCallback(() =>
+{
+	const layers_left = [...document.querySelectorAll('layer-title-left')];
+	const layers_right = [...document.querySelectorAll('layer-title-right')];
+	const layer_left_height = layers_left.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
+	const layer_right_height = layers_right.reduce((sum, element) => sum + element.getBoundingClientRect().height + 40, 0);
 
-const layer_person = document.getElementById('layer_person');
-layer_person.style.maxHeight = `${layer_right_height - layer_left_height - 40}px`;
-layer_person.style.width = '100%';
-layer_person.style.gridTemplateColumns = `minmax(0, ${layer_person.style.maxHeight}) minmax(40px, 1fr) minmax(0, ${layer_person.style.maxHeight}) 10px`;
+	const layer_person = document.getElementById('layer_person');
+	layer_person.style.maxHeight = `${layer_right_height - layer_left_height - 40}px`;
+	layer_person.style.width = '100%';
+	layer_person.style.gridTemplateColumns = `minmax(0, ${layer_person.style.maxHeight}) minmax(40px, 1fr) minmax(0, ${layer_person.style.maxHeight}) 10px`;
+});

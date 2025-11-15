@@ -1,19 +1,4 @@
-.float-right
-{
-	float: right;
-}
-
 layer-background.II
 {
 	column-gap: 20px;
-}
-
-layer-background.II > .layer-background-half.left > hr
-{
-	margin-right: 65px;
-}
-
-layer-background.II > .layer-background-half.right > hr
-{
-	margin-left: 65px;
 }

@@ -1,5 +1,18 @@
 'use strict';
 
+const titles =
+{
+	'resume': 'Resume _ Caner Özdemir',
+	'cover-short': 'Cover Letter',
+	'cover-long': 'Cover Letter',
+
+	'index-1-short': 'Cover Letter',
+	'index-1-long': 'Cover Letter',
+
+	'index-2': 'General and Skills',
+	'index-3': 'Experiences and Projects'
+};
+
 const searchParams = new URL(window.location.href.replace(/\+/g, '%2B')).searchParams;
 const path = searchParams.get('path');
 

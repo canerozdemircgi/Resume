@@ -12,19 +12,6 @@ const GetRandomRgba = (rMin, rMax, gMin, gMax, bMin, bMax, aMin, aMax) =>
 };
 const GetRandomSelect = inputs => inputs[Math.floor(Math.random() * inputs.length)];
 
-const titles =
-{
-	'resume': 'Resume _ Caner Özdemir',
-	'cover-short': 'Cover Letter',
-	'cover-long': 'Cover Letter',
-
-	'index-1-short': 'Cover Letter',
-	'index-1-long': 'Cover Letter',
-
-	'index-2': 'General and Skills',
-	'index-3': 'Experiences and Projects'
-};
-
 const CreateFrame = async path_frame =>
 {
 	await Promise.all

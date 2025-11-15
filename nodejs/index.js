@@ -30,8 +30,8 @@ const configs_base =
 };
 const configs_extn =
 {
-	company: 'MERKUR GROUP',
-	position: 'Java Game Backend Developer',
+	company: '___COMPANY___',
+	position: '___POSITION___',
 
 	// name: 'Caner Özdemir',
 	/*

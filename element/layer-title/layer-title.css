@@ -8,12 +8,14 @@ layer-title-left
 {
 	padding-right: 20px;
 	border-right: 2px solid var(--border-color);
+	border-radius: 4px 0 0 4px;
 }
 
 layer-title-right
 {
 	padding-left: 20px;
 	border-left: 2px solid var(--border-color);
+	border-radius: 0 4px 4px 0;
 }
 
 .layer-title-caption-left
@@ -38,12 +40,12 @@ layer-title-right
 
 .layer-title-hr-left
 {
-	margin: 0 20px auto 0;
+	margin: 0 40px auto 0;
 }
 
 .layer-title-hr-right
 {
-	margin: 0 0 auto 20px;
+	margin: 0 0 auto 40px;
 }
 
 .layer-title-text-left,
