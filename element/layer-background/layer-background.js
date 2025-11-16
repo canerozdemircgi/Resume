@@ -7,7 +7,7 @@ class LayerBackground extends HTMLElement
 	static #LayerBackgroundFlatBottomString(page)
 	{
 return `\
-<span class='layer-background-page'><span class='layer-background-page-container'>${page}</span></span>`;
+<span class='layer-background-page'><span class='layer-background-page-container font-mono'>${page}</span></span>`;
 	}
 
 	static #LayerBackgroundSpiralMiddleString()
@@ -19,8 +19,8 @@ return `\
 	static #LayerBackgroundSpiralBottomString(page)
 	{
 return `\
-<span class='layer-background-page-top'><span class='layer-background-page-container'>${page}</span></span>
-<span class='layer-background-page-bottom'><span class='layer-background-page-container'>${page}</span></span>`;
+<span class='layer-background-page-top'><span class='layer-background-page-container font-mono'>${page}</span></span>
+<span class='layer-background-page-bottom'><span class='layer-background-page-container font-mono'>${page}</span></span>`;
 	}
 
 	static #LayerBackgroundString(page, chunk_middle, chunk_bottom, texts)

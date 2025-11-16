@@ -32,10 +32,10 @@ return `\
 
 		if (this.#mark === '')
 			this.#mark = '&#8203;';
-		else if (this.#mark === '_star-white')
-			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Star-White.svg'>`;
-		else if (this.#mark === '_star-black')
-			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Star-Black.svg'>`;
+		else if (this.#mark === '_matter-white')
+			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Matter-White.svg'>`;
+		else if (this.#mark === '_matter-black')
+			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Matter-Black.svg'>`;
 		else
 			this.#mark = `<span class='font-medium font-mono'>${this.#mark}</span>`;
 
@@ -78,10 +78,10 @@ ${mark}<span>${text}</span>`;
 
 		if (this.#mark === '')
 			this.#mark = '&#8203;';
-		else if (this.#mark === '_star-white')
-			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Star-White.svg'>`;
-		else if (this.#mark === '_star-black')
-			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Star-Black.svg'>`;
+		else if (this.#mark === '_matter-white')
+			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Matter-White.svg'>`;
+		else if (this.#mark === '_matter-black')
+			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Matter-Black.svg'>`;
 		else
 			this.#mark = `<span class='font-medium font-mono'>${this.#mark}</span>`;
 

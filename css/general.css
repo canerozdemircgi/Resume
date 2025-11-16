@@ -11,8 +11,8 @@
 	--background-color: #f0f0f0;
 	--foreground-color: #303030;
 	--border-color: #303030;
-	--inactive-color: #909090;
-	--tag-color: #ffffff02;
+	--inactive-color: #808080;
+	--tag-color: #ffffff01;
 
 	--selection-color: #f0f080;
 	--selection-image-color: #f0f08044;
@@ -23,7 +23,7 @@
 	--gradient-1-color: #6090c0;
 	--gradient-2-color: #60c060;
 
-	--link-color: #408080;
+	--link-color: #208080;
 	--link-selection-color: #a04040;
 
 	--iso-216-ratio: 1.41421356237309;
@@ -37,27 +37,39 @@
 {
 	box-sizing: border-box;
 	max-height: 999999px;
+
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
 	font: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+
+	text-box: trim-both cap alphabetic;
+	text-rendering: geometricPrecision;
+}
+
+svg *
+{
+	shape-rendering: geometricPrecision;
+}
+
+:root
+{
+	font: var(--font-size-main) 'Roboto', sans-serif;
+	line-height: 1;
 	letter-spacing: 0.125px;
 
-	text-rendering: geometricPrecision;
-	shape-rendering: geometricPrecision;
+	width: var(--body-width);
+
+	background-color: var(--foreground-color);
+	color: var(--background-color);
 }
 
 body
 {
-	text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-
-	font: var(--font-size-main) Roboto, sans-serif;
-	line-height: 1;
-
-	width: var(--body-width);
 	margin: 0;
 	padding: 0;
-
-	background-color: var(--foreground-color);
-	color: var(--background-color);
 }
 
 ::selection
@@ -84,7 +96,6 @@ a
 
 img
 {
-	object-fit: contain;
 	width: max-content;
 	max-width: 100%;
 }
@@ -110,13 +121,19 @@ img
 .font-medium,
 .font-medium *
 {
-	font-weight: 500;
+	font-weight: 550;
+	letter-spacing: 0.25px;
 }
 
 .font-mono,
 .font-mono *
 {
 	font-family: 'Roboto Mono', monospace;
+}
+
+.inactive
+{
+	color: var(--inactive-color);
 }
 
 .br00
