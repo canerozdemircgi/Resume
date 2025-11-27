@@ -25,13 +25,13 @@ const configs_base =
 	operation: operation.pdf,
 	operation_pdf_output_directory: 'C:/Users/User/Downloads',
 
-	resource: resource.remote,
-	path: path.cover_short
+	resource: resource.local,
+	path: path.resume
 };
 const configs_extn =
 {
-	company: 'MERKUR GROUP',
-	position: 'Java Game Backend Developer',
+	company: '___COMPANY___',
+	position: '___POSITION___',
 
 	// name: 'Caner Özdemir',
 	/*

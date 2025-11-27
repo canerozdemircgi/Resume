@@ -8,7 +8,6 @@ return `\
 <span>${text}</span>${mark}`;
 	}
 
-	get #text() { return this.getAttribute('text') || ''; }
 	get #br() { return this.getAttribute('br'); }
 	get #bold() { return this.hasAttribute('bold'); }
 	get #is_drawn() { return this.hasAttribute('drawn'); }
@@ -21,6 +20,9 @@ return `\
 	{
 		super();
 
+		const innerHTML = `${this.innerHTML}`;
+		this.innerHTML = null;
+
 		if (this.#bold)
 			this.classList.add('font-medium');
 		if (this.#is_drawn)
@@ -32,16 +34,16 @@ return `\
 
 		if (this.#mark === '')
 			this.#mark = '&#8203;';
-		else if (this.#mark === '_star-white')
-			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Star-White.svg'>`;
-		else if (this.#mark === '_star-black')
-			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Star-Black.svg'>`;
+		else if (this.#mark === '_matter-white')
+			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Matter-White.svg'>`;
+		else if (this.#mark === '_matter-black')
+			this.#mark = `<img class='text-entry-mark-img-left' src='resource/main/Matter-Black.svg'>`;
 		else
 			this.#mark = `<span class='font-medium font-mono'>${this.#mark}</span>`;
 
 		if (this.#br !== undefined)
 			this.style.marginBottom = this.#br;
-		this.insertAdjacentHTML('beforeend', TextEntryLeft.#TextEntryLeftString(this.#text, this.#mark));
+		this.insertAdjacentHTML('beforeend', TextEntryLeft.#TextEntryLeftString(innerHTML, this.#mark));
 	}
 }
 window.customElements.define('text-entry-left', TextEntryLeft);
@@ -54,7 +56,6 @@ return `\
 ${mark}<span>${text}</span>`;
 	}
 
-	get #text() { return this.getAttribute('text') || ''; }
 	get #br() { return this.getAttribute('br'); }
 	get #bold() { return this.hasAttribute('bold'); }
 	get #is_drawn() { return this.hasAttribute('drawn'); }
@@ -67,6 +68,9 @@ ${mark}<span>${text}</span>`;
 	{
 		super();
 
+		const innerHTML = `${this.innerHTML}`;
+		this.innerHTML = null;
+
 		if (this.#bold)
 			this.classList.add('font-medium');
 		if (this.#is_drawn)
@@ -78,15 +82,15 @@ ${mark}<span>${text}</span>`;
 
 		if (this.#mark === '')
 			this.#mark = '&#8203;';
-		else if (this.#mark === '_star-white')
-			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Star-White.svg'>`;
-		else if (this.#mark === '_star-black')
-			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Star-Black.svg'>`;
+		else if (this.#mark === '_matter-white')
+			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Matter-White.svg'>`;
+		else if (this.#mark === '_matter-black')
+			this.#mark = `<img class='text-entry-mark-img-right' src='resource/main/Matter-Black.svg'>`;
 		else
 			this.#mark = `<span class='font-medium font-mono'>${this.#mark}</span>`;
 
 		this.style.marginBottom = this.#br;
-		this.insertAdjacentHTML('beforeend', TextEntryRight.#TextEntryRightString(this.#text, this.#mark));
+		this.insertAdjacentHTML('beforeend', TextEntryRight.#TextEntryRightString(innerHTML, this.#mark));
 	}
 }
 window.customElements.define('text-entry-right', TextEntryRight);

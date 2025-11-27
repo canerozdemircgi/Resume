@@ -16,7 +16,7 @@ if (searchParams.has('matters'))
 
 	for (let i = 0; i < matters.length; i += 2)
 	{
-		span_job_requirements.insertAdjacentHTML('beforeend', `<text-entry-left br='15px' text='${matters[i]}' mark='_star-black'></text-entry-left>`);
-		span_my_qualifications.insertAdjacentHTML('beforeend', `<text-entry-right br='15px' text='${matters[i + 1]}' mark='_star-black'></text-entry-right>`);
+		span_job_requirements.insertAdjacentHTML('beforeend', `<text-entry-left br='15px' mark='_matter-black'>${matters[i]}</text-entry-left>`);
+		span_my_qualifications.insertAdjacentHTML('beforeend', `<text-entry-right br='15px' mark='_matter-black'>${matters[i + 1]}</text-entry-right>`);
 	}
 }

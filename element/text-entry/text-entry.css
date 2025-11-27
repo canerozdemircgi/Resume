@@ -1,23 +1,28 @@
-text-entry-left
+text-entry-left,
+text-entry-right
 {
 	display: grid;
-	grid-template-columns: 1fr 15px;
 	column-gap: 10px;
+
+	align-items: baseline;
+}
+
+text-entry-left
+{
+	grid-template-columns: 1fr 15px;
 	text-align: right;
 }
 
 text-entry-right
 {
-	display: grid;
 	grid-template-columns: 15px 1fr;
-	column-gap: 10px;
 	text-align: left;
 }
 
-text-entry-left > span,
-text-entry-right > span
+text-entry-left:not(.text-entry-drawn) > span,
+text-entry-right:not(.text-entry-drawn) > span
 {
-	line-height: calc(var(--font-size-main) + 5px);
+	line-height: 1.4;
 }
 
 .text-entry-drawn
@@ -25,8 +30,21 @@ text-entry-right > span
 	background-color: var(--stamp-blue-color);
 	color: var(--background-color);
 	border-radius: 4px;
+
 	margin: 0 -10px;
-	padding: 10px;
+	padding: 15px 10px;
+}
+
+.text-entry-drawn > span,
+.text-entry-drawn + text-entry-left > span,
+.text-entry-drawn + text-entry-right > span,
+.text-entry-drawn + text-entry-left + text-entry-left > span,
+.text-entry-drawn + text-entry-left + text-entry-right > span,
+.text-entry-drawn + text-entry-right + text-entry-left > span,
+.text-entry-drawn + text-entry-right + text-entry-right > span
+{
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
 }
 
 .text-entry-mark-img-left,

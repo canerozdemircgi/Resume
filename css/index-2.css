@@ -10,9 +10,10 @@
 
 #layer_avatar
 {
-	border: 2px dashed var(--border-color);
-	border-radius: 16px;
-	padding: 5px;
+	border: 2px dashed var(--foreground-color);
+	padding: 2px;
+
+	border-radius: 50%;
 }
 
 #layer_qr
@@ -38,7 +39,7 @@
 
 	width: max-content;
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 0.5em;
 }
 
 #reminder_version_content::selection
@@ -50,15 +51,4 @@
 #reminder_version_content_data
 {
 	font: 28px/28px 'TeX Gyre Chorus';
-	letter-spacing: 0.25px;
-}
-
-layer-background.I > .layer-background-half.left > hr
-{
-	margin-right: 55px;
-}
-
-layer-background.I > .layer-background-half.right > hr
-{
-	margin-left: 55px;
 }

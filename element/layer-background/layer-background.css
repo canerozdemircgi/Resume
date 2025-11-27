@@ -24,7 +24,6 @@ layer-background
 .layer-background-spiral
 {
 	grid-template-columns: 1fr max-content 1fr;
-	column-gap: 10px;
 }
 
 #layer_background_matrix
@@ -66,33 +65,20 @@ layer-background
 	justify-content: center;
 	align-items: center;
 
-	height: 50px;
-
-	border-top: 2px solid transparent;
-	border-bottom: 2px solid transparent;
-	border-left: 2px solid var(--border-color);
-	border-right: 2px solid var(--border-color);
-	border-radius: 25%;
-}
-
-.layer-background-page
-{
-	width: 150px;
-	bottom: 28px;
-	left: calc(50% - 75px);
-}
-
-.layer-background-page-top,
-.layer-background-page-bottom
-{
 	width: 50px;
+	height: 50px;
 	left: calc(50% - 25px);
 
 	background-color: var(--foreground-color);
 	color: var(--background-color);
-	border: none;
+	border-radius: 25%;
 
 	transform: rotate(45deg);
+}
+
+.layer-background-page
+{
+	bottom: 27px;
 }
 
 .layer-background-page-top
@@ -107,13 +93,9 @@ layer-background
 
 .layer-background-page-container
 {
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 1px;
-}
 
-.layer-background-page-top > .layer-background-page-container,
-.layer-background-page-bottom > .layer-background-page-container
-{
 	transform: rotate(-45deg);
 }
 
@@ -129,7 +111,7 @@ layer-background
 {
 	display: grid;
 	grid-template-rows: auto max-content max-content max-content;
-	row-gap: 10px;
+	row-gap: 15px;
 }
 
 .layer-background-half.left
