@@ -1,0 +1,141 @@
+layer-background
+{
+	position: relative;
+	z-index: 1;
+
+	display: grid;
+	height: var(--body-height);
+
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+
+	cursor: unset;
+	user-select: unset;
+	-ms-user-select: unset;
+	-webkit-user-select: unset;
+}
+
+.layer-background-flat
+{
+	grid-template-columns: 1fr 1fr;
+	column-gap: 40px;
+}
+
+.layer-background-spiral
+{
+	grid-template-columns: 1fr max-content 1fr;
+}
+
+#layer_background_matrix
+{
+	position: absolute;
+	z-index: -1;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	cursor: default;
+	user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+
+	transform: translateZ(0);
+}
+
+#layer_background_matrix > span
+{
+	font: 25px 'Roboto Mono', monospace;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 25px;
+	height: 25px;
+}
+
+.layer-background-page,
+.layer-background-page-top,
+.layer-background-page-bottom
+{
+	position: absolute;
+	z-index: 99;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+
+	width: 50px;
+	height: 50px;
+	left: calc(50% - 25px);
+
+	background-color: var(--foreground-color);
+	color: var(--background-color);
+	border-radius: 25%;
+
+	transform: rotate(45deg);
+}
+
+.layer-background-page
+{
+	bottom: 27px;
+}
+
+.layer-background-page-top
+{
+	top: calc(25% - 25px);
+}
+
+.layer-background-page-bottom
+{
+	top: calc(75% - 25px);
+}
+
+.layer-background-page-container
+{
+	font-weight: 600;
+	letter-spacing: 1px;
+
+	transform: rotate(-45deg);
+}
+
+.layer-background-middle
+{
+	object-fit: fill;
+	width: 100px;
+	height: var(--body-height);
+	margin: 0 auto;
+}
+
+.layer-background-half
+{
+	display: grid;
+	grid-template-rows: auto max-content max-content max-content;
+	row-gap: 15px;
+}
+
+.layer-background-half.left
+{
+	margin: 20px 0 20px 20px;
+}
+
+.layer-background-half.right
+{
+	margin: 20px 20px 20px 0;
+}
+
+.layer-background-half-left > *:not(:last-child),
+.layer-background-half-right > *:not(:last-child)
+{
+	margin-bottom: 40px;
+}
+
+.layer-background-bottom-text-left
+{
+	text-align: left;
+}
+
+.layer-background-bottom-text-right
+{
+	text-align: right;
+}
