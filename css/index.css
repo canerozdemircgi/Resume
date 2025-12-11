@@ -1,0 +1,19 @@
+@media print
+{
+	@page
+	{
+		size: var(--body-width) var(--body-height) !important;
+		margin: 0 !important;
+	}
+}
+
+*
+{
+	print-color-adjust: exact !important;
+	-webkit-print-color-adjust: exact !important;
+}
+
+.page-break
+{
+	break-before: page !important;
+}
