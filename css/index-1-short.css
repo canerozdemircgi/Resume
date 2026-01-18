@@ -1,0 +1,63 @@
+#img_signature
+{
+	margin-left: auto;
+}
+
+#img_company,
+#div_company
+{
+	display: grid;
+	align-items: center;
+
+	font: 600 24px 'Roboto Serif', monospace;
+	letter-spacing: 1px;
+}
+
+layer-title-left
+{
+	border-right: none;
+}
+
+layer-title-right
+{
+	border-left: none;
+}
+
+layer-title-left:last-child,
+layer-title-right:last-child
+{
+	border-bottom: 2px solid var(--border-color);
+	padding-bottom: 40px;
+}
+
+text-flat,
+text-entry-left,
+text-entry-right
+{
+	font: 28px/42px 'TeX Gyre Chorus', serif;
+}
+
+.layer-background-half
+{
+	align-items: center;
+}
+
+.layer-background-half-left > *,
+.layer-background-half-right > *
+{
+	margin-bottom: 60px;
+}
+
+.layer-title-caption-left > span,
+.layer-title-caption-right > span
+{
+	font: 700 30px 'TeX Gyre Chorus', serif;
+	letter-spacing: 1px;
+}
+
+.img-signature
+{
+	display: block;
+	height: 88px;
+	margin-top: 40px;
+}
