@@ -1,0 +1,52 @@
+layer-title-left,
+layer-title-right
+{
+	display: block;
+}
+
+layer-title-left
+{
+	padding-right: 30px;
+	border-right: 2px solid var(--border-color);
+	border-radius: 4px 0 0 4px;
+}
+
+layer-title-right
+{
+	padding-left: 30px;
+	border-left: 2px solid var(--border-color);
+	border-radius: 0 4px 4px 0;
+}
+
+.layer-title-caption-left,
+.layer-title-caption-right
+{
+	display: grid;
+	margin: 0 0 30px 0;
+}
+
+.layer-title-caption-left
+{
+	grid-template-columns: auto max-content;
+}
+
+.layer-title-caption-right
+{
+	grid-template-columns: max-content auto;
+}
+
+.layer-title-caption-left > span,
+.layer-title-caption-right > span
+{
+	font-weight: 500;
+}
+
+.layer-title-hr-left
+{
+	margin: 0 40px auto 0;
+}
+
+.layer-title-hr-right
+{
+	margin: 0 0 auto 40px;
+}
