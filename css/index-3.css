@@ -1,0 +1,19 @@
+layer-background.II
+{
+	column-gap: 20px;
+}
+
+.text-entry-drawn
+{
+	padding: 25px 10px;
+}
+
+layer-background.II > .layer-background-half.left
+{
+	width: calc(200% - 20px);
+}
+
+layer-background.II > .layer-background-half.right
+{
+	z-index: -99;
+}

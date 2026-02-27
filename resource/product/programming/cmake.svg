@@ -1,0 +1,19 @@
+<svg viewBox="0 0 40.036999 40" xmlns="http://www.w3.org/2000/svg">
+	<linearGradient id="b" x1="404.60854" x2="384.60858" y1="507.798" y2="547.798" gradientUnits="userSpaceOnUse">
+		<stop offset="0" stop-color="#197cf1"/>
+		<stop offset="1" stop-color="#20bcfa"/>
+	</linearGradient>
+	<linearGradient id="a" x1="424.60854" x2="404.60854" y1="547.797973" y2="507.798" gradientUnits="userSpaceOnUse">
+		<stop offset="0" stop-color="#c61423"/>
+		<stop offset="1" stop-color="#dc2b41"/>
+	</linearGradient>
+	<linearGradient id="c" x1="44" x2="4" gradientTransform="translate(380.60854 503.798)" gradientUnits="userSpaceOnUse">
+		<stop offset="0" stop-color="#42a603"/>
+		<stop offset="1" stop-color="#78da06"/>
+	</linearGradient>
+	<g fill-rule="evenodd">
+		<path fill="url(#a)" d="m404.60854 507.798 2.9375 33.29687 17.0625 6.70313z" transform="translate(-384.57143 -507.798)"/>
+		<path fill="url(#b)" d="m404.60854 507.798-20 40 21.79492-19.66797z" transform="translate(-384.57143 -507.798)"/>
+		<path fill="url(#c)" d="m396.74135 536.85073-12.1289 10.94336 39.99609.004zm-12.09765 10.87696-.0723.0664h.0391z" transform="translate(-384.57143 -507.798)"/>
+	</g>
+</svg>
