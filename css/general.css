@@ -1,0 +1,190 @@
+@font-face
+{
+	font-family: 'TeX Gyre Chorus';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../resource/font/texgyrechorus-mediumitalic.otf');
+}
+
+:root
+{
+	--background-color: #f0f0f0;
+	--foreground-color: #303030;
+	--border-color: #303030;
+	--inactive-color: #808080;
+	--tag-color: #ffffff01;
+
+	--selection-color: #f0f080;
+	--selection-image-color: #f0f08044;
+
+	--stamp-red-color: #a04040;
+	--stamp-blue-color: #4a6587;
+
+	--gradient-1-color: #6090c0;
+	--gradient-2-color: #60c060;
+
+	--link-color: #208080;
+	--link-selection-color: #a04040;
+
+	--iso-216-ratio: 1.41421356237309;
+	--body-width: 1350px;
+	--body-height: calc(var(--body-width) * var(--iso-216-ratio));
+
+	--font-size-main: 22px;
+}
+
+*
+{
+	box-sizing: border-box;
+	max-height: 999999px;
+
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+	font: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+
+	text-box: trim-both cap alphabetic;
+	text-rendering: geometricPrecision;
+}
+
+svg *
+{
+	shape-rendering: geometricPrecision;
+}
+
+:root
+{
+	font: var(--font-size-main) 'Roboto', sans-serif;
+	line-height: 1;
+	letter-spacing: 0.125px;
+
+	width: var(--body-width);
+
+	background-color: var(--foreground-color);
+	color: var(--background-color);
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+::selection
+{
+	background-color: var(--selection-color);
+	color: var(--foreground-color);
+}
+
+img::selection
+{
+	background-color: var(--selection-image-color);
+}
+
+br::selection
+{
+	background-color: transparent;
+	color: transparent;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+img
+{
+	width: max-content;
+	max-width: 100%;
+}
+
+u
+{
+	text-decoration-thickness: 1pt;
+}
+
+.hr
+{
+	margin: 0;
+
+	border-top: 2px solid var(--border-color);
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+
+	border-radius: 4px;
+}
+
+.font-medium,
+.font-medium *
+{
+	font-weight: 550;
+	letter-spacing: 0.25px;
+}
+
+.font-mono,
+.font-mono *
+{
+	font-family: 'Roboto Mono', monospace;
+}
+
+.inactive
+{
+	color: var(--inactive-color);
+}
+
+.br00
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 0;
+}
+
+.br05
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 5px;
+}
+
+.br10
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 10px;
+}
+
+.br20
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 20px;
+}
+
+.br30
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 30px;
+}
+
+.br40
+{
+	content: '';
+	display: block;
+
+	line-height: 0;
+	margin-bottom: 40px;
+}
