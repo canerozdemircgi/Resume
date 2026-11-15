@@ -1,0 +1,2 @@
+npm config set allow-scripts=puppeteer
+npm install --global puppeteer

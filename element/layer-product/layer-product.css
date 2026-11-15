@@ -1,0 +1,104 @@
+layer-product-left,
+layer-product-right
+{
+	display: grid;
+	grid-template-columns: max-content auto;
+	column-gap: 20px;
+
+	border-top: 2px solid var(--foreground-color);
+	border-left: 2px solid transparent;
+	border-radius: 6px 0 0 0;
+}
+
+.layer-product-img
+{
+	width: 64px;
+	height: 64px;
+	padding: 10px;
+
+	margin-top: -2px;
+	margin-left: -2px;
+	border-top: 2px solid transparent;
+
+	border-bottom: 2px solid var(--foreground-color);
+	border-left: 2px solid var(--foreground-color);
+	border-radius: 6px 0 0 6px;
+}
+
+.layer-product-container
+{
+	display: grid;
+	grid-template-rows: 1fr 18px;
+
+	margin-left: -20px;
+	padding: 0 15px;
+}
+
+.layer-product-caption-container
+{
+	display: grid;
+	grid-template-columns: max-content auto max-content max-content;
+	text-align: left;
+	align-items: center;
+}
+
+.layer-product-badge
+{
+	width: 25px;
+	height: 25px;
+	opacity: 0.33;
+}
+
+.layer-product-circle
+{
+	width: 25px;
+	height: 25px;
+	margin-left: 20px;
+	margin-right: -12px;
+}
+
+.layer-product-progress-container
+{
+	display: flex;
+	background: linear-gradient(90deg,
+		var(--gradient-1-color) 0%,
+		var(--gradient-1-color) 10%,
+		var(--gradient-2-color) 100%
+	);
+	border-radius: 4px 0 4px 4px;
+}
+
+.layer-product-progress
+{
+	margin-right: auto;
+
+	background-color: transparent;
+	font-size: small;
+}
+
+.layer-product-progress-remain
+{
+	margin-top: -2px;
+
+	background-color: var(--background-color);
+	border-bottom: 2px solid var(--border-color);
+	border-right: 2px solid var(--border-color);
+	border-radius: 0 0 4px 0;
+}
+
+.layer-tag
+{
+	color: var(--tag-color);
+}
+
+.layer-tag::selection
+{
+	background-color: transparent;
+	color: transparent;
+}
+
+.layer-product-tag
+{
+	font-size: 25%;
+	line-height: 25%;
+}

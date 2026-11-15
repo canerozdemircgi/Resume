@@ -1,0 +1,13 @@
+*.css
+*.editorconfig
+*.gitignore
+*.htm
+*.html
+*.js
+*.ma
+*.md
+*.nojekyll
+*.npm
+*.svg
+*.txt
+*.url
